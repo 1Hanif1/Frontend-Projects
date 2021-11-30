@@ -12,7 +12,7 @@ They have a nice way to classify projects based on it's difficulty
  - A ~ advance
  - G ~ Guru
 
-- So based on these naming I have named my projects in " _difficulty_-**project-name** " format
+So based on these naming I have named my projects in " _difficulty_-**project-name** " format
 
 ## Project List
 ### Newbie
