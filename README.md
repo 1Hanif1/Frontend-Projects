@@ -1,15 +1,16 @@
 # Hanif Barbhuiya's Frontend projects
 
-- This repository is to add projects that I build for practice
-- Each project's name start with either N, J, I, A or G
+This repository is to add projects that I build for practicing frontend development
+Each project's name start with either N, J, I, A or G
 
-- I make projects from frontend mentor primarily
-- They have a nice way to classify projects based on it's difficulty
+Most of my projects are made from [Frontend Mentor](https://www.frontendmentor.io/home) - They provide assets to create real world projects in the form of challenges. Really helpful for anyone wanting to improve their frontend skills :)  
+
+They have a nice way to classify projects based on it's difficulty
  - N ~ newbie
  - J ~ junior
  - I ~ intermediate
  - A ~ advance
- - G ~ Guru 
+ - G ~ Guru
 
 - So based on these naming I have named my projects in " _difficulty_-**project-name** " format
 
