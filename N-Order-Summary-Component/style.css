@@ -1,0 +1,192 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* CSS custom properties */
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+	--cta-hover: hsl(245, 75%, 52%, 0.5);
+}
+/* Resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: 'Red Hat Display', sans-serif;
+}
+a {
+	display: block;
+	text-decoration: none;
+}
+button {
+	border: none;
+}
+
+/* CSS */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--pale-blue);
+	min-height: 100vh;
+	line-height: 1.5;
+	padding: 2rem;
+
+	background-image: url(./images/pattern-background-desktop.svg);
+	background-repeat: repeat no-repeat;
+	background-position: center top -40%;
+	background-size: 100% auto;
+	animation: waveDesktop 5s linear infinite;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	max-width: 40rem;
+	border-radius: 1.8rem;
+	overflow: hidden;
+
+	box-shadow: 0rem 1rem 7rem -5rem var(--desaturated-blue);
+}
+
+.image__container {
+	min-height: 0rem;
+	background-image: url(./images/illustration-hero.svg);
+	background-size: cover;
+	background-position: center;
+	animation: expand 200ms ease-in-out forwards;
+}
+
+.card__container {
+	padding: 3rem;
+	font-size: clamp(1.4rem, 1.1vw, 2rem);
+}
+.card__container > * {
+	margin-bottom: 2rem;
+	animation: slideUp 1000ms ease-in-out forwards;
+}
+
+.card__title {
+	text-align: center;
+	font-size: clamp(1.8rem, 1.2vw, 2.4rem);
+	font-weight: 900;
+	color: var(--dark-blue);
+}
+
+.card__text {
+	text-align: center;
+	color: var(--desaturated-blue);
+}
+
+.plan__style {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--very-pale-blue);
+	padding: 2rem;
+	border-radius: 1.2rem;
+}
+.plan__icon {
+	width: 5rem;
+	height: auto;
+}
+.plan__title {
+	color: var(--dark-blue);
+	margin: 0 1rem;
+}
+.plan__price {
+	display: block;
+	font-size: clamp(1.2rem, 1vw, 1.6rem);
+	color: var(--desaturated-blue);
+	font-weight: 400;
+}
+
+.plan__change {
+	text-decoration: underline;
+	color: var(--bright-blue);
+	font-weight: 700;
+	transition: color 200ms ease-in-out;
+}
+
+.cta {
+	width: 100%;
+	font-size: clamp(1.4rem, 1vw, 2rem);
+	padding: 1.2em;
+	background-color: var(--bright-blue);
+	font-weight: 700;
+	color: white;
+	cursor: pointer;
+	box-shadow: 0px 2rem 2rem var(--pale-blue);
+	border-radius: 1.2rem;
+	transition: background-color 200ms ease-in-out, box-shadow 100ms ease-in-out;
+}
+
+.plan__cancel {
+	margin-bottom: 0;
+	text-align: center;
+	font-weight: 700;
+	color: var(--desaturated-blue);
+	transition: color 200ms ease-in-out;
+}
+
+/* State Styles */
+.cta:hover {
+	background-color: var(--cta-hover);
+}
+.cta:active {
+	box-shadow: 0px 1.5rem 2rem var(--pale-blue);
+}
+
+.plan__change:hover {
+	color: var(--cta-hover);
+}
+.plan__cancel:hover {
+	color: var(--dark-blue);
+}
+
+/* Animation */
+@keyframes slideUp {
+	from {
+		transform: translateY(10%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes expand {
+	from {
+		min-height: 0rem;
+	}
+	to {
+		min-height: 20rem;
+	}
+}
+
+@keyframes waveDesktop {
+	from {
+		background-position: left 0vw top -30%;
+	}
+	to {
+		background-position: left 100vw top -30%;
+	}
+}
+
+@keyframes waveMobile {
+	from {
+		background-position: left 0vw top;
+	}
+	to {
+		background-position: left 100vw top;
+	}
+}
