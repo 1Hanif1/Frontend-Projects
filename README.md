@@ -1,7 +1,7 @@
 # Hanif Barbhuiya's Frontend projects
 
-This repository is to add projects that I build for practicing frontend development
-Each project's name start with either N, J, I, A or G
+This repository is to add projects that I build for practicing frontend development.
+Each project's name starts with either N, J, I, A or G
 
 Most of my projects are made from [Frontend Mentor](https://www.frontendmentor.io/home) - They provide assets to create real world projects in the form of challenges. Really helpful for anyone wanting to improve their frontend skills :)  
 
