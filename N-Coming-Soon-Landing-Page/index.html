@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css"/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Base Apparel coming soon page</title>
+	</head>
+	<body>
+		<nav class="nav layout--padding">
+			<figure class="logo__container">
+				<img src="./images/logo.svg" alt="Base apparel" />
+			</figure>
+		</nav>
+
+		<main class="main layout--padding">
+			<h1 class="main__title"><span>We're</span> coming soon</h1>
+			<p class="main__paragraph"> Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+
+      <div class="main__input">
+        <div class="main__input--container">
+          <input class="email--input" type="email" placeholder="Email Address" required />
+          <img src="./images/icon-error.svg" class="main__error--icon hidden"></img>
+          <button class="main__input--cta">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
+        </div>
+        <span class="main__error--text hidden">Please provide a valid email</span>
+      </div>
+		</main>
+
+    <div class="hero__image"></div>
+
+    <script>
+      const submitBtn = document.querySelector('.main__input--cta');
+      const emailInput = document.querySelector('.email--input');
+      const errorSigns = [document.querySelector('.main__error--icon'),document.querySelector('.main__error--text')]
+      const REG_EX = /\S+@\S+[/.]\S+/;
+      submitBtn.addEventListener('click',function(e){
+        if(REG_EX.test(String(emailInput.value).toLowerCase())) return;
+        errorSigns.forEach(sign => sign.classList.remove('hidden'));
+        setTimeout(()=>{
+          errorSigns.forEach(sign => sign.classList.add('hidden'));
+        }, 1500)
+      })
+    </script>
+	</body>
+</html>
+
