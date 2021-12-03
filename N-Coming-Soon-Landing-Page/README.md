@@ -51,6 +51,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Hanif Barbhuiya](https://www.your-site.com)
+- Website - [Hanif Barbhuiya](https://bio.link/hanifmb)
 - Frontend Mentor - [@1Hanif1](https://www.frontendmentor.io/profile/1Hanif1)
 - Twitter - [@HMohammedB\_](https://twitter.com/HMohammedB_)

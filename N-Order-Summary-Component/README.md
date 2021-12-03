@@ -40,13 +40,11 @@ Users should be able to:
 
 ### What I learned
 
-In this project I practiced animation using key frames.
-I used CSS custom properties for various colors
-
-I will be practicing more on CSS animations using keyframes
+- In this project I practiced animation using key frames.
+- I used CSS custom properties for creating color variables.
 
 ## Author
 
-- Website - [Hanif Barbhuiya](https://www.your-site.com)
+- Website - [Hanif Barbhuiya](https://bio.link/hanifmb)
 - Frontend Mentor - [@1Hanif1](https://www.frontendmentor.io/profile/1Hanif1)
 - Twitter - [@HMohammedB\_](https://twitter.com/HMohammedB_)

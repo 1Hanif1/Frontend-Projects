@@ -53,6 +53,7 @@ body {
 .logo__container img {
 	display: inline-block;
 	margin: auto;
+	min-width: 1rem;
 	width: 100%;
 	height: auto;
 }
@@ -142,6 +143,7 @@ body {
 	box-shadow: 0rem 1rem 2rem -0.9rem var(--desaturated-red);
 }
 .main__input--cta img {
+	min-width: 0.5rem;
 	width: 1vw;
 }
 
