@@ -123,7 +123,7 @@ body {
 			url(./images/bg-mobile.svg);
 	}
 	.hero {
-		background: no-repeat center/100% url(./images/illustration-mockups.svg);
+		background: no-repeat center/contain url(./images/illustration-mockups.svg);
 	}
 
 	.main {
