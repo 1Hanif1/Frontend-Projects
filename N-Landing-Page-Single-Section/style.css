@@ -37,7 +37,7 @@ body {
 	color: white;
 	background: var(--violet) no-repeat left center/cover
 		url(./images/bg-desktop.svg);
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .nav {
 	grid-area: nav;
