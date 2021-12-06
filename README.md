@@ -22,3 +22,4 @@ So based on these naming I have named my projects in " _difficulty_-**project-na
 - Order Summary Component ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/N-Order-Summary-Component/)
 - Coming Soon landing page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/N-Coming-Soon-Landing-Page/)
 - Huddle Landing Page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/N-Landing-Page-Single-Section/)
+- Stats Card Component ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/N-stats-card-component/)
