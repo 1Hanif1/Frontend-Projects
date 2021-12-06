@@ -1,0 +1,184 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* CSS Custom Properties */
+:root {
+	--v-d-b: hsl(233, 47%, 7%);
+	--d-d-b: hsl(244, 38%, 16%);
+	--s-v: hsl(277, 64%, 61%);
+	--w: hsl(0, 0%, 100%);
+	--t-w-1: hsla(0, 0%, 100%, 0.75);
+	--t-w-2: hsla(0, 0%, 100%, 0.6);
+	--paragraph: 'Lexend Deca', sans-serif;
+	--heading: 'Inter', sans-serif;
+}
+/* Resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	line-height: 1.3;
+	min-height: 100vh;
+}
+
+/* Main */
+body {
+	background-color: var(--v-d-b);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: var(--paragraph);
+	color: var(--w);
+}
+.main {
+	display: grid;
+	grid-template-rows: minmax(auto, 30vw);
+	grid-template-columns: 40vw 30vw;
+	grid-template-areas: 'main image';
+	border-radius: max(1rem, 0.5vw);
+	overflow: hidden;
+	background-color: var(--d-d-b);
+}
+.main__text {
+	grid-area: main;
+	display: grid;
+	grid-template-rows: repeat(4, minmax(2vw, auto));
+	grid-template-columns: repeat(3, auto);
+	grid-template-areas:
+		'T T T'
+		'P P P'
+		'. . .'
+		'A B C';
+	padding: max(3rem, 3vw);
+	margin-inline-end: 2vw;
+}
+.main__title {
+	grid-area: T;
+	font-family: var(--heading);
+	font-size: max(2.8rem, 3vw);
+	margin-bottom: 0.5em;
+	line-height: 1.1;
+	animation: slideIn 1s ease-in-out;
+}
+.main__title--highlight {
+	color: var(--s-v);
+	animation: color 2s ease-in-out;
+}
+.main__paragraph {
+	grid-area: P;
+	font-size: max(1.6rem, 1.2vw);
+	line-height: 1.5;
+	color: var(--t-w-2);
+	margin-block-end: max(3rem, 2vw);
+	font-weight: 400;
+	animation: slideIn 1.4s ease-in-out;
+}
+.main__stat {
+	font-family: var(--heading);
+	font-weight: 700;
+	font-size: max(2.6rem, 1.4vw);
+	animation: slideIn 1.8s ease-in-out;
+}
+.stat__name {
+	display: block;
+	font-weight: 400;
+	font-size: max(1.2rem, 0.8vw);
+	margin-block-start: 0.5em;
+	text-transform: uppercase;
+	color: var(--t-w-2);
+}
+.main__stat--one {
+	grid-area: A;
+}
+.main__stat--two {
+	grid-area: B;
+}
+.main__stat--three {
+	grid-area: C;
+}
+.main__image {
+	position: relative;
+	grid-area: image;
+	background: var(--s-v) center/cover no-repeat
+		url(./images/image-header-desktop.jpg);
+	background-blend-mode: multiply;
+	animation: fadeIn 2s ease-in-out;
+}
+
+/* Media Query */
+@media screen and (max-width: 1000px) {
+	body {
+		padding: 3rem;
+	}
+	.main {
+		min-height: 90vh;
+		display: grid;
+		grid-template-rows: 1fr 2fr;
+		grid-template-columns: auto;
+		grid-template-areas: 'image' 'main';
+		text-align: center;
+		max-width: 42rem;
+	}
+	.main__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	.main__paragraph {
+		margin-bottom: 5rem;
+	}
+	.main__text > *:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	.main__stat--one {
+		animation: slideIn 1.8s ease-in-out;
+	}
+	.main__stat--two {
+		animation: slideIn 2s ease-in-out;
+	}
+	.main__stat--three {
+		animation: slideIn 2.4s ease-in-out;
+	}
+
+	.main__stat .main__image {
+		background-image: url(./images/image-header-mobile.jpg);
+	}
+}
+/* Keyframes */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-100vw);
+	}
+	to {
+		transform: translateX(0vw);
+	}
+}
+
+@keyframes color {
+	from {
+		color: var(--w);
+	}
+	to {
+		color: var(--s-v);
+	}
+}
