@@ -68,7 +68,6 @@ body {
 .faq__title {
 	font-size: max(2rem, 2.4vw);
 	margin-bottom: 1em;
-	text-align: center;
 }
 .faq__body > span {
 	display: block;
@@ -129,6 +128,9 @@ input {
 		width: 90%;
 		height: 50rem;
 		background: var(--w);
+	}
+	.faq__title {
+		text-align: center;
 	}
 	.faq__image {
 		transform: translateY(-10rem) scale(2);
