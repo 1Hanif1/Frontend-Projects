@@ -72,7 +72,8 @@ body {
 	margin-bottom: 1em;
 	text-align: center;
 }
-.faq__body > * {
+.faq__body > span {
+	display: block;
 	font-size: max(1.4rem, 1vw);
 	margin-top: 1.2em;
 	border-bottom: 0.1vw solid var(--l-g-b);
@@ -179,7 +180,7 @@ input {
 	}
 	50% {
 		transform: translateX(00%);
-		opacity: 0.5;
+		opacity: 0.8;
 	}
 	to {
 		opacity: 1;
