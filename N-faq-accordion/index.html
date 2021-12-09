@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | FAQ Accordion Card</title>
+	</head>
+	<body>
+		<main class="container">
+			<img class="box" src="./images/illustration-box-desktop.svg" alt="/" />
+			<div class="faq__image"></div>
+			<section class="faq__main">
+				<h1 class="faq__title">FAQ</h1>
+				<form class="faq__body" action="/">
+					<li class="faq__question">
+						<input type="radio" name="Q" value="/" id="Q1" checked />
+						<label for="Q1">
+							<p class="question">How many team members can I invite?</p>
+						</label>
+						<p class="answer">
+							You can invite up to 2 additional users on the Free plan. There is
+							no limit on team members for the Premium plan.
+						</p>
+					</li>
+
+					<li class="faq__question">
+						<input type="radio" name="Q" value="/" id="Q2" />
+						<label for="Q2">
+							<p class="question">What is the maximum file upload size?</p>
+						</label>
+						<p class="answer">
+							No more than 2GB. All files in your account must fit your allotted
+							storage space.
+						</p>
+					</li>
+
+					<li class="faq__question">
+						<input type="radio" name="Q" value="/" id="Q3" />
+						<label for="Q3">
+							<p class="question">How do I reset my password?</p>
+						</label>
+						<p class="answer">
+							Click “Forgot password” from the login page or “Change password”
+							from your profile page. A reset link will be emailed to you.
+						</p>
+					</li>
+
+					<li class="faq__question">
+						<input type="radio" name="Q" value="/" id="Q4" />
+						<label for="Q4">
+							<p class="question">Can I cancel my subscription?</p>
+						</label>
+						<p class="answer">
+							Yes! Send us a message and we’ll process your request no questions
+							asked.
+						</p>
+					</li>
+
+					<li class="faq__question">
+						<input type="radio" name="Q" value="/" id="Q5" />
+						<label for="Q5">
+							<p class="question">Do you provide additional support?</p>
+						</label>
+						<p class="answer">
+							Chat and email support is available 24/7. Phone lines are open
+							during normal business hours.
+						</p>
+					</li>
+
+					<!-- 
+            li
+              input:radio
+              label
+                p.faq
+                p.answer
+              /label
+            /li
+           -->
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
