@@ -1,0 +1,116 @@
+.main {
+	display: grid;
+	grid-template-columns: 1.01fr 0.99fr;
+	grid-template-rows: repeat(3, 1fr);
+	align-items: stretch;
+	font-size: 2vw;
+
+	min-height: 80vw;
+	color: $vddb;
+
+	&__section {
+		padding: 4.2em;
+	}
+
+	&__image {
+		&--one {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			background-image: url(../images/desktop/image-transform.jpg);
+		}
+		&--two {
+			width: 100%;
+			height: 100%;
+			background: $w no-repeat center center/cover
+				url(../images/desktop/image-stand-out.jpg);
+		}
+	}
+
+	&__section {
+		&--three {
+			color: $ddc;
+			background: center center/cover no-repeat
+				url(../images/desktop/image-graphic-design.jpg);
+		}
+		&--four {
+			color: $db;
+			background: center center/cover no-repeat
+				url(../images/desktop/image-photography.jpg);
+		}
+	}
+}
+
+.section {
+	&__title {
+		font-family: 'Fraunces', serif;
+	}
+
+	&__para {
+		font-size: 0.59em;
+		margin-block: 1em;
+		color: $vdgb;
+		line-height: 1.5;
+	}
+
+	&__link {
+		position: relative;
+		font-family: 'Fraunces', serif;
+		text-transform: uppercase;
+		font-size: 0.5em;
+	}
+
+	&__inner {
+		padding: 1.5em 3em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		&--title {
+			font-family: 'Fraunces', serif;
+			font-size: 1em;
+			margin-block-end: 0.8em;
+		}
+		&--para {
+			margin: 0 auto;
+			width: 70%;
+			font-size: 0.6em;
+			line-height: 1.5;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.main {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
+		align-items: stretch;
+		font-size: 6vw;
+
+		&__section {
+			text-align: center;
+			padding: 2em;
+		}
+	}
+
+	.main__section--one {
+		grid-row: 2 / 3;
+	}
+	.main__image--one {
+		grid-row: 1 / 2;
+	}
+
+	.section {
+		&__para {
+			font-size: 0.7em;
+		}
+
+		&__inner {
+			padding: 1em 0em;
+		}
+	}
+}
