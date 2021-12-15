@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css"
+			integrity="sha512-rQgMaFKZKIoTKfYInSVMH1dSM68mmPYshaohG8pK17b+guRbSiMl9dDbd3Sd96voXZeGerRIFFr2ewIiusEUgg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<script defer src="./js/script.js"></script>
+
+		<title>Frontend Mentor | Sunnyside agency landing page</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="nav">
+				<div class="nav__logo">
+					<img src="./images/logo.svg" alt="Sunnyside logo" />
+				</div>
+
+				<ul class="nav__links hidden">
+					<li class="nav__link">About</li>
+					<li class="nav__link">Services</li>
+					<li class="nav__link">Projects</li>
+					<li class="nav__link nav__cta">Contact</li>
+				</ul>
+
+				<div class="hamburger"><i class="fas fa-bars fa-5x"></i></div>
+			</nav>
+
+			<h1 class="header__title">We are creatives</h1>
+			<img class="header__arrow" src="./images/icon-arrow-down.svg" alt="/" />
+		</header>
+
+		<main id="main" class="main">
+			<section class="main__section main__section--one">
+				<h1 class="section__title">Transform your brand</h1>
+				<p class="section__para">
+					We are a full-service creative agency specializing in helping brands
+					grow fast. Engage your clients through compelling visuals that do most
+					of the marketing for you.
+				</p>
+				<a href="#main" class="section__link">Learn more</a>
+			</section>
+			<div class="main__image main__image--one"></div>
+			<div class="main__image main__image--two"></div>
+			<section class="main__section main__section--two">
+				<h1 class="section__title">Stand out to the right audience</h1>
+				<p class="section__para">
+					Using a collaborative formula of designers, researchers,
+					photographers, videographers, and copywriters, we’ll build and extend
+					your brand in digital places.
+				</p>
+				<a href="#main" class="section__link">Learn more</a>
+			</section>
+			<section class="section__inner main__section--three">
+				<h1 class="section__inner--title">Graphic design</h1>
+				<p class="section__inner--para">
+					Great design makes you memorable. We deliver artwork that underscores
+					your brand message and captures potential clients’ attention.
+				</p>
+			</section>
+			<section class="section__inner main__section--four">
+				<h1 class="section__inner--title">Photography</h1>
+				<p class="section__inner--para">
+					Increase your credibility by getting the most stunning, high-quality
+					photos that improve your business image.
+				</p>
+			</section>
+		</main>
+
+		<article class="test">
+			<h1 class="test__title">Client testimonials</h1>
+			<section class="test__card">
+				<img src="./images/image-emily.jpg" alt="/" />
+				<p class="test__card--para">
+					We put our trust in Sunnyside and they delivered, making sure our
+					needs were met and deadlines were always hit.
+				</p>
+				<h1 class="test__card--name">
+					Emily R.
+					<span class="test__card--desig">Marketing Director</span>
+				</h1>
+			</section>
+
+			<section class="test__card">
+				<img src="./images/image-thomas.jpg" alt="/" />
+				<p class="test__card--para">
+					Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
+					success made it a satisfying and enjoyable experience.
+				</p>
+				<h1 class="test__card--name">
+					Thomas S.
+					<span class="test__card--desig">Chief Operating Officer</span>
+				</h1>
+			</section>
+
+			<section class="test__card">
+				<img src="./images/image-jennie.jpg" alt="/" />
+				<p class="test__card--para">
+					Incredible end result! Our sales increased over 400% when we worked
+					with Sunnyside. Highly recommended!
+				</p>
+				<h1 class="test__card--name">
+					Jennie F.
+					<span class="test__card--desig">Business Owner</span>
+				</h1>
+			</section>
+		</article>
+
+		<div class="gallery">
+			<div class="gallery__image--one"></div>
+			<div class="gallery__image--two"></div>
+			<div class="gallery__image--three"></div>
+			<div class="gallery__image--four"></div>
+		</div>
+
+		<footer class="footer">
+			<div class="footer__logo">
+				<img src="./images/logoFooter.svg" alt="Sunnyside logo" />
+			</div>
+
+			<ul class="footer__links">
+				<li class="footer__link">About</li>
+				<li class="footer__link">Services</li>
+				<li class="footer__link">Projects</li>
+			</ul>
+
+			<div class="footer__socials">
+				<span class="fab fa-facebook fa-lg"></span>
+				<span class="fab fa-instagram fa-lg"></span>
+				<span class="fab fa-twitter fa-lg"></span>
+				<span class="fab fa-pinterest fa-lg"></span>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelector('.hamburger').addEventListener('click', () => {
+				const menu = document.querySelector('.nav__links');
+				menu.classList.toggle('hidden');
+			});
+		</script>
+	</body>
+</html>
