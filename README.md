@@ -1,4 +1,4 @@
-# Hanif Barbhuiya's Frontend projects
+# Frontend projects
 
 This repository is to add projects that I build for practicing frontend development.
 Each project's name starts with either N, J, I, A or G
