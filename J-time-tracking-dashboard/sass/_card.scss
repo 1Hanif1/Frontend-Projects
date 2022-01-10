@@ -1,0 +1,84 @@
+.card{
+    padding-top: 1.8em;
+    font-size: 1.4vw;
+    overflow: hidden;
+    border-radius: 0.6em;
+    position: relative;
+    color: white;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-position: right 10% top -8%;
+
+    & h3{
+        font-weight: 400;
+    }
+
+    &__main{
+        background-color: $darkBlue;
+        border-top-left-radius: 0.6em;
+        border-top-right-radius: 0.6em;
+        height: 100%;
+        padding: 1.7vw;
+
+        &:hover{
+            background-color: hsl(235, 46%, 25%);
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: 0.8em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > img{
+            cursor: pointer;
+            width: 1.2vw;
+            height: auto;
+        }
+    }
+
+    &__stat{
+        margin-top: auto;
+    }
+
+    .stat__main{
+        font-size: 2.6em;
+        font-weight: 300;
+    }
+    .stat__minor{
+        font-size: 0.7em;
+        margin-top: 0.5em;
+        color: $paleBlue;
+    }
+}
+
+.card--one{
+    background-color: $lightOrange;
+    background-image: url(../images/icon-work.svg);
+    
+}
+.card--two{
+    background-color: $softBlue;
+    background-image: url(../images/icon-play.svg);
+}
+.card--three{
+    background-color: $lightRed;
+    background-image: url(../images/icon-study.svg);
+}
+.card--four{
+    background-color: $limeGreen;
+    background-image: url(../images/icon-exercise.svg);
+}
+.card--five{
+    background-color: $violet;
+    background-image: url(../images/icon-social.svg);
+}
+.card--six{
+    background-color: $softOrange;
+    background-image: url(../images/icon-self-care.svg);
+}

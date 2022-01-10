@@ -31,16 +31,17 @@ body {
   display: -ms-grid;
   display: grid;
   max-width: 80%;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (0.8fr)[4];
+      grid-template-columns: repeat(4, 0.8fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   gap: 2em;
-  font-size: 1.6rem;
+  font-size: 0.9vw;
 }
 
 .main__user {
-  font-size: 1.3vw;
+  background-color: #1c1f4a;
+  font-size: 1.2vw;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -59,7 +60,6 @@ body {
 
 .main__user > .bottom {
   color: #6f76c8;
-  background-color: #1c1f4a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,6 +68,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.4em;
+}
+
+.main__user > .bottom > .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main__user > .bottom > .btn:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .main__user > .bottom > span:nth-child(2) {
@@ -87,7 +98,7 @@ body {
   padding: 0.1em;
   background-color: white;
   border-radius: 50%;
-  width: 35%;
+  width: 6vw;
 }
 
 .user__image > img {
@@ -101,5 +112,107 @@ body {
 .user__text > span {
   display: block;
   font-size: 2em;
+}
+
+.card {
+  padding-top: 1.8em;
+  font-size: 1.4vw;
+  overflow: hidden;
+  border-radius: 0.6em;
+  position: relative;
+  color: white;
+  font-weight: 300;
+  background-repeat: no-repeat;
+  background-position: right 10% top -8%;
+}
+
+.card h3 {
+  font-weight: 400;
+}
+
+.card__main {
+  background-color: #1c1f4a;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+  height: 100%;
+  padding: 1.7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__main:hover {
+  background-color: #22275d;
+}
+
+.card__title {
+  font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__title > img {
+  cursor: pointer;
+  width: 1.2vw;
+  height: auto;
+}
+
+.card__stat {
+  margin-top: auto;
+}
+
+.card .stat__main {
+  font-size: 2.6em;
+  font-weight: 300;
+}
+
+.card .stat__minor {
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  color: #bdc1ff;
+}
+
+.card--one {
+  background-color: #ff8c66;
+  background-image: url(../images/icon-work.svg);
+}
+
+.card--two {
+  background-color: #56c2e6;
+  background-image: url(../images/icon-play.svg);
+}
+
+.card--three {
+  background-color: #ff5c7c;
+  background-image: url(../images/icon-study.svg);
+}
+
+.card--four {
+  background-color: #4acf81;
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.card--five {
+  background-color: #7536d3;
+  background-image: url(../images/icon-social.svg);
+}
+
+.card--six {
+  background-color: #f1c65b;
+  background-image: url(../images/icon-self-care.svg);
 }
 /*# sourceMappingURL=style.css.map */
