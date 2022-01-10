@@ -6,18 +6,34 @@
   gap: 2em;
   font-size: 0.9vw;
 
+  @media screen and (max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    min-width: 80%;
+    font-size: 2.8vw;
+  }
+
   &__user {
     background-color: $darkBlue;
-    font-size: 1.2vw;
+    font-size: 1.3em;
     grid-column: 1/2;
     grid-row: 1/3;
     border-radius: 0.8em;
     overflow: hidden;
+    animation: slideRight 800ms ease-in-out;
 
     & > .top {
       background-color: $violet;
       border-radius: 0.8em;
       padding: 1.8em 1.4em;
+
+      @media screen and (max-width: 768px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+      }
     }
 
     & > .bottom {
@@ -25,6 +41,13 @@
       display: flex;
       flex-direction: column;
       padding: 1.4em;
+      @media screen and (max-width: 768px){
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4em;
+        padding: 1em;
+      }
 
       & > .btn{
         width: fit-content;
@@ -33,6 +56,10 @@
       & > .btn:hover{
         cursor: pointer;
         color: white;
+      }
+
+      & > .btn:active{
+        transform: scale(0.9);
       }
 
       & > span:nth-child(2) {
@@ -51,6 +78,9 @@
     background-color: white;
     border-radius: 50%;
     width: 6vw;
+    @media screen and (max-width: 768px){
+      width: 4em;
+    }
 
     & > img {
       width: 100%;

@@ -19,6 +19,7 @@
         border-top-left-radius: 0.6em;
         border-top-right-radius: 0.6em;
         height: 100%;
+        animation: slideUp 1s ease-in-out;
         padding: 1.7vw;
 
         &:hover{
@@ -56,31 +57,79 @@
         margin-top: 0.5em;
         color: $paleBlue;
     }
+    @media screen and (max-width: 768px){
+    padding-top: 4em;
+    font-size: 2vw;
+    border-radius: 1em;
+    background-size: 15vw;
+
+    &__main{
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        padding: 2em;
+        
+
+        &:hover{
+            background-color: hsl(235, 46%, 25%);
+        }
+
+    }
+
+    &__title{
+        font-size: 2em;
+
+        & > img{
+            width: 4vw;
+        }
+    }
+
+    &__stat{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-block-start: 2em;
+    }
+
+    .stat__main{
+        font-size: 4em;
+        font-weight: 300;
+    }
+    .stat__minor{
+        font-size: 2em;
+        margin-top: 0em;
+    }
+    
+    }
 }
 
 .card--one{
     background-color: $lightOrange;
     background-image: url(../images/icon-work.svg);
-    
+    animation: slideDown 1s ease-in-out;
 }
 .card--two{
     background-color: $softBlue;
     background-image: url(../images/icon-play.svg);
+    animation: slideDown 1.2s ease-in-out;
 }
 .card--three{
     background-color: $lightRed;
     background-image: url(../images/icon-study.svg);
+    animation: slideDown 1.4s ease-in-out;
 }
 .card--four{
     background-color: $limeGreen;
     background-image: url(../images/icon-exercise.svg);
+    animation: slideDown 1.6s ease-in-out;
 }
 .card--five{
     background-color: $violet;
     background-image: url(../images/icon-social.svg);
+    animation: slideDown 1.8s ease-in-out;
 }
 .card--six{
     background-color: $softOrange;
     background-image: url(../images/icon-self-care.svg);
+    animation: slideDown 2s ease-in-out;
 }
 

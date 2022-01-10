@@ -19,4 +19,9 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: $veryDarkBlue;
+
+  @media screen and (max-width: 768px){
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
 }
