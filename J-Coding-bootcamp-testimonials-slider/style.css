@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+*,*::after,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.main{
+    font-size: max(1.6rem, 1vw); /* Main font size for ems*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider{
+    width: 100%;
+    display: flex;
+    padding: 4em 2em 2em;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background:  no-repeat center top 7vw/95vw url(./images/pattern-bg.svg);
+}
+.slider > img{
+    width: 75vw;
+    border-radius: 0.5em;
+    box-shadow: 0em 2em 6em -1em hsl(240, 18%, 77%);
+}
+
+.slider__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 5.6em;
+    padding: 0.8em 1.2em;
+    border-radius: 1.9em;
+    transform: translateY(-50%);
+
+    box-shadow: -1em 3em 5em -1.4em hsl(240, 18%, 77%);
+}
+
+.slider__buttons img{
+    width: 0.8em;
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    text-align: center;
+}
+
+.testimonial__description{
+    font-size: 1.3em;
+}
+.testimonial__title{
+    margin-top: 1em;
+    font-size: 1.3em;
+}
+.testimonial__title > span{
+    font-size: 0.9em;
+    margin: 0.2em;
+    display: block;
+    color: hsl(240, 18%, 77%);
+}
+
+body{
+    background: no-repeat center bottom/contain url(./images/pattern-curve.svg);
+}
