@@ -6,28 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
-
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <script defer src="./script.js"></script>
 </head>
 
 <body>
   <main class="main">
 
     <figure class="slider">
-      <img src="./images/image-tanya.jpg" alt="user image">
+      <img class="image--js" src="./images/image-tanya.jpg" alt="user image">
       <div class="slider__buttons">
-        <img src="./images/icon-prev.svg" alt="left" class="slider__button--left">
-        <img src="./images/icon-next.svg" alt="right" class="slider__button--right">
+        <img src="./images/icon-prev.svg" data-btn="left" alt="left" class="slider__button--left">
+        <img src="./images/icon-next.svg" data-btn="right" alt="right" class="slider__button--right">
       </div>
     </figure>
 
     <div class="testimonial">
-      <p class="testimonial__description">
+      <p class="testimonial__description testimonial--js">
         “ I’ve been interested in coding for a while but never taken the jump, until now.
         I couldn’t recommend this course enough. I’m now in the job of my dreams and so
         excited about the future. ”
       </p>
-      <h2 class="testimonial__title"> Tanya Sinclair <span>UX Engineer</span></h2>
+      <h2 class="testimonial__title name--js"> Tanya Sinclair <span class="designation--js">UX Engineer</span></h2>
     </div>
   </main>
 </body>

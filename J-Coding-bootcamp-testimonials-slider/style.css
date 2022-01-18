@@ -44,6 +44,7 @@ body{
     padding: 0.8em 1.2em;
     border-radius: 1.9em;
     transform: translateY(-50%);
+    cursor: pointer;
 
     box-shadow: -1em 3em 5em -1.4em hsl(240, 18%, 77%);
 }
@@ -76,4 +77,83 @@ body{
 
 body{
     background: no-repeat center bottom/contain url(./images/pattern-curve.svg);
+}
+
+@media screen and (min-width: 800px) {
+    body{
+        background: no-repeat left bottom/40% 20% url(./images/pattern-curve.svg);
+    }
+    .main{
+        display: grid;
+        padding: 3vw;
+        grid-template-columns: 1fr 1fr;
+        gap: 0%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .slider{
+        width: 90%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        transform: translateX(-15%);
+        background:  no-repeat center top/contain url(./images/pattern-bg.svg);
+        position: relative;
+    }
+    
+    .slider > img{
+        width: 85%;
+    }
+
+    .slider__buttons{
+        position: absolute;
+        cursor: pointer;
+        bottom: -2%;
+        left: 20%
+    }
+
+    .slider__buttons img{
+        width: 0.8vw;
+    }
+
+    .testimonial {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        font-size: 1.5vw;
+        text-align: left;
+        transform: translateX(18%);
+        align-items: flex-start;
+        color: hsla(240, 38%, 20%,0.6);
+        transition: opacity 500ms ease-in-out;
+        background: no-repeat top left 20%/12% url(./images/pattern-quotes.svg);
+    }
+
+    .testimonial__title{
+        margin-top: 2em;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+    }
+
+    .testimonial__title > span{
+        margin: 0em;
+        margin-inline-start: 0.8em;
+    }
+
+
+
+    
+}
+
+/* Handle all animation */
+@keyframes fade {
+    from{
+        opacity: 0;
+    }to
+    {opacity: 1;
+    }
+}
+
+.animation--js{
+    animation: fade 1s ease-in-out forwards;
 }
