@@ -1,0 +1,19 @@
+body{
+    background-color: $vdbBG;
+}
+.main{
+    font-size: 1vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2em 8em;
+    column-gap: 2em;
+    row-gap: 2em;
+}
+.header{
+
+    grid-column: 1 / 4;
+}
+.title__two{
+
+    grid-column: 1 / -1;
+}
