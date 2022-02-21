@@ -10,10 +10,45 @@ body{
     row-gap: 2em;
 }
 .header{
-
+    color: $wText;
     grid-column: 1 / 4;
+
+    &__title{
+        font-size: 2.5em;
+    }
+
+    .follower__count{
+        color:$dbText
+    }
+}
+.dark__mode{
+    color:$dbText;
+    @include flex(flex-end,center);
+    &__switch{
+        margin-inline-start: 1em;
+        border-radius: 1.2em;
+        display: block;
+        width: 4em;
+        height: 1.5em;
+        background-color: $limeGreen;
+        position: relative;
+
+        &--button{
+            position: absolute;
+            top: 20%;
+            // 5 ---> 70
+            left: 5%;
+            display: block;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: $vdbBGpattern;
+        }
+    }
 }
 .title__two{
-
     grid-column: 1 / -1;
+    color: $wText;
+    font-size: 1.8em;
 }
+

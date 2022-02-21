@@ -1,0 +1,67 @@
+.card__one{
+    @include flex(unset,center);
+    flex-direction: column;
+    background-color: $ddbCardBG;
+    padding-block: 2.5em;
+    color: $dbText;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.2em;
+
+
+    &--stat{
+        margin-block: 1.4em;
+        // font-size: 3em;
+        @include flex(unset,center);
+        flex-direction: column;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+    }
+
+    &--numbers{
+        display: block;
+        font-size: 4em;
+        font-weight: bolder;
+        color:$wText;
+        letter-spacing: 0rem;
+    }
+
+    &--title{
+        @include flex(center,center);
+        font-weight: normal;
+        font-size: 1.2em;
+
+        img{
+            margin-inline-end: 0.5em;
+        }
+    }
+
+    &--growth{
+        @include flex(center,center);
+        color: $limeGreen;
+        img{
+            margin-inline-end: 0.5em
+        }
+    }
+
+    &--facebook::before,&--instagram::before, &--youtube::before,&--twitter:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 0.3em;
+    }
+    &--facebook::before{
+        background-color: $facebook;
+    }
+    &--twitter::before{
+        background-color: $twitter;
+    }
+    &--instagram::before{
+        background: linear-gradient(90deg, $instagramGradientOne,$instagramGradientTwo);
+    }
+    &--youtube::before{
+        background-color: $youtube;
+    }
+}
