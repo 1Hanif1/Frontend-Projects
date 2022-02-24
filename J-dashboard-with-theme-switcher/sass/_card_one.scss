@@ -1,24 +1,29 @@
 .card__one{
+    transition: background-color 300ms ease-in-out;
     @include flex(unset,center);
     flex-direction: column;
     background-color: $ddbCardBG;
-    padding-block: 2.5em;
+    padding-block: 2em;
     color: $dbText;
     position: relative;
     overflow: hidden;
     border-radius: 0.2em;
+    animation: popIn 1s ease-in-out forwards ;
+    @include mobile{
+        margin-block: 2em;
+    }
 
 
     &--stat{
         margin-block: 1.4em;
-        // font-size: 3em;
         @include flex(unset,center);
         flex-direction: column;
         text-transform: uppercase;
-        letter-spacing: 0.4rem;
+        letter-spacing: 0.3vw;
     }
 
     &--numbers{
+        transition: color 500ms ease-in-out;
         display: block;
         font-size: 4em;
         font-weight: bolder;
@@ -30,9 +35,15 @@
         @include flex(center,center);
         font-weight: normal;
         font-size: 1.2em;
+        font-weight: bold;
 
         img{
             margin-inline-end: 0.5em;
+            width: 1.5vw;
+            height: auto;
+            @include mobile{
+                width: 3vw;
+            }
         }
     }
 
@@ -40,7 +51,15 @@
         @include flex(center,center);
         color: $limeGreen;
         img{
-            margin-inline-end: 0.5em
+            margin-inline-end: 0.5em;
+            width: 0.5vw;
+            height: auto;
+            @include mobile{
+                width: 1.5vw;
+            }
+        }
+        &.negative{
+            color:$brightRed;
         }
     }
 

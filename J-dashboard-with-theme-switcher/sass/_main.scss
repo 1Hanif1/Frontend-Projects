@@ -1,29 +1,49 @@
 body{
     background-color: $vdbBG;
+    transition: background-color 300ms ease-in-out;
 }
 .main{
     font-size: 1vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 2em 8em;
+    padding: 1.5em 8em;
     column-gap: 2em;
     row-gap: 2em;
+
+    @include mobile{
+        display: block;
+        font-size: 2.5vw;
+    }
 }
 .header{
     color: $wText;
     grid-column: 1 / 4;
-
+    @include mobile{
+        padding-block-end: 2em;
+    }
     &__title{
+        transition: color 300ms ease-in-out;
         font-size: 2.5em;
+        @include mobile{
+            font-size: 1.5em;
+            margin-block-end: 0.2em;
+        }
     }
 
     .follower__count{
-        color:$dbText
+        color:$dbText;
+        font-weight: bold;
     }
 }
 .dark__mode{
     color:$dbText;
+    font-weight: bold;
     @include flex(flex-end,center);
+    @include mobile{
+        justify-content: space-between;
+        padding-block: 1em;
+        border-block-start: 0.1em solid $ddbCardBG;
+    }
     &__switch{
         margin-inline-start: 1em;
         border-radius: 1.2em;
@@ -43,6 +63,9 @@ body{
             height: 1em;
             border-radius: 50%;
             background-color: $vdbBGpattern;
+            cursor: pointer;
+
+            transition: all 300ms ease-in-out;
         }
     }
 }
@@ -50,5 +73,6 @@ body{
     grid-column: 1 / -1;
     color: $wText;
     font-size: 1.8em;
+    transition: color 300ms ease-in-out;
 }
 

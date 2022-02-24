@@ -1,0 +1,52 @@
+.card__two{
+    transition: background-color 300ms ease-in-out;
+    background-color: $ddbCardBG;
+    padding: 1.5em;
+    animation: popIn 1s ease-in-out forwards;
+    border-radius: 0.2em;
+    &--title{
+        color:$dbText;
+        margin-block-end: 1.5em;
+        font-size: 1em;
+        font-weight: bold;
+        @include flex(space-between,center);
+
+        img{
+            width:1.5vw;
+            height: auto;
+            @include mobile{
+                width: 3vw;
+            }
+        }
+    }
+    @include mobile{
+        margin-block: 1.5em;
+    }
+    &--stat{
+        @include flex(space-between, flex-end);
+        
+        span:nth-child(1){
+            font-size: 2em;
+            font-weight: bold;
+            color:$wText;
+            transition: color 500ms ease-in-out;
+        }
+        
+        span:nth-child(2){
+            font-size: 1em;
+            @include flex(space-between, center);
+            color:$limeGreen;
+            img{
+                margin-inline-end: 0.5em;
+                width:0.5vw;
+                height: auto;
+                @include mobile{
+                    width: 1.2vw;
+                }
+            }
+            &.negative{
+                color:$brightRed;
+            }
+        }
+    }
+}
