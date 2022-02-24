@@ -30,3 +30,4 @@ So based on these naming I have named my projects in " _difficulty_-**project-na
 - Sunnyside landing page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-Sunny-Side-Landing-Page/)
 - Time tracking dashboard ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-time-tracking-dashboard/)
 - Coding bootcamp testimonials slider ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-Coding-bootcamp-testimonials-slider/)
+- Dashboard with theme swithcer ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-dashboard-with-theme-switcher/)
