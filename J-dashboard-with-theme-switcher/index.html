@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./sass/style.css">
+  <script defer src="./js/script.js"></script>
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
 </head>
@@ -18,7 +19,7 @@
     </header>
     <p class="dark__mode">Dark Mode
       <span class="dark__mode__switch">
-        <span class="dark__mode__switch--button"></span>
+        <span data-theme="dark" class="dark__mode__switch--button"></span>
       </span>
     </p>
 
@@ -43,7 +44,7 @@
     <div class="card__one card__one--youtube">
       <h2 class="card__one--title"><img src="./images/icon-youtube.svg" alt="youtube">Nathan F.</h2>
       <p class="card__one--stat"><span class="card__one--numbers">8239</span>Subscribers</p>
-      <p class="card__one--growth"><img src="./images/icon-down.svg" alt="increase">144 Today</p>
+      <p class="card__one--growth negative"><img src="./images/icon-down.svg" alt="increase">144 Today</p>
     </div>
 
     <h2 class="title__two">Overview - Today</h2>
@@ -60,7 +61,7 @@
       <h2 class="card__two--title">Likes<img src="./images/icon-facebook.svg" alt="facebook"></h2>
       <p class="card__two--stat">
         <span class="card__two--numbers">52</span>
-        <span><img src="./images/icon-down.svg" alt="decrease"> 2%</span>
+        <span class="negative"><img src="./images/icon-down.svg" alt="decrease"> 2%</span>
       </p>
     </div>
 
@@ -100,7 +101,7 @@
       <h2 class="card__two--title">Likes<img src="./images/icon-youtube.svg" alt="youtube"></h2>
       <p class="card__two--stat">
         <span class="card__two--numbers">107</span>
-        <span><img src="./images/icon-down.svg" alt="decrease">19%</span>
+        <span class="negative"><img src="./images/icon-down.svg" alt="decrease">19%</span>
       </p>
     </div>
 
@@ -108,7 +109,7 @@
       <h2 class="card__two--title">Total Views<img src="./images/icon-youtube.svg" alt="youtube"></h2>
       <p class="card__two--stat">
         <span class="card__two--numbers">1407</span>
-        <span><img src="./images/icon-down.svg" alt="decrease">12%</span>
+        <span class="negative"><img src="./images/icon-down.svg" alt="decrease">12%</span>
       </p>
     </div>
   </main>
