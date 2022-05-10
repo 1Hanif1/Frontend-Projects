@@ -22,6 +22,10 @@ button {
   background: none;
 }
 
+a, a:active {
+  color: black;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -101,13 +105,121 @@ button {
     padding: 1em;
     background-size: 100%;
   }
-  .header__title, .header__paragraph, .header__image {
+  .header__image {
     width: 40%;
+  }
+  .header__title, .header__paragraph {
+    width: 50%;
   }
   .header__cta {
     width: initial;
     padding: 0.8em 4em;
     cursor: pointer;
+  }
+}
+.section__one {
+  background-color: hsl(218deg, 28%, 13%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  padding: 3em 4em;
+  font-size: max(2vw, 1.4rem);
+}
+.section__two {
+  background-color: hsl(218deg, 28%, 13%);
+  font-size: max(1.4vw, 1.2rem);
+  padding: 0em 3em;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+.section__two__image {
+  margin: auto;
+  margin-bottom: 4em;
+}
+.section__two__paragraph--one, .section__two__paragraph--two {
+  font-size: max(1.6vw, 1.4rem);
+  margin: 1.4em 0em;
+}
+.section__two__link {
+  font-size: 1em;
+}
+.section__two__link a {
+  color: hsl(176deg, 68%, 64%);
+  display: flex;
+  align-items: center;
+}
+.section__two__link img {
+  display: inline;
+  width: 2vw;
+}
+
+.feature {
+  margin-bottom: 6em;
+}
+.feature__image {
+  width: 24%;
+}
+.feature__title {
+  margin-bottom: 0.6em;
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 800px) {
+  .section__one {
+    display: grid;
+    grid-template-columns: 34% 34%;
+    justify-content: center;
+    gap: 1em 4em;
+    font-size: max(1.2vw, 1.2rem);
+    padding-top: 6em;
+  }
+
+  .section__two {
+    font-size: max(1.4vw, 1.2rem);
+    padding: 0em 5em;
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section__two__image {
+    margin-right: 2em;
+    margin-bottom: none;
+    width: 80%;
+  }
+  .section__two__paragraph--one, .section__two__paragraph--two {
+    font-size: max(1.2vw, 1.2rem);
+    margin: 1.4em 0em;
+  }
+  .section__two__link {
+    font-size: 1em;
+  }
+  .section__two__link a {
+    color: hsl(176deg, 68%, 64%);
+  }
+  .section__two__link img {
+    display: inline;
+    width: 2vw;
+  }
+
+  .feature {
+    margin-bottom: none;
+  }
+  .feature__image {
+    width: 15%;
+  }
+  .feature__title {
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+  }
+  .feature__paragraph {
+    color: hsla(0deg, 0%, 100%, 0.8);
+  }
+  .feature__two img {
+    width: 12%;
   }
 }
 
