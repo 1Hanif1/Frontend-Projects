@@ -38,8 +38,11 @@
         align-items: center;
         padding: 1em;
         background-size: 100%;
-        &__title, &__paragraph,&__image{
+        &__image{
             width: 40%;
+        }
+        &__title, &__paragraph{
+            width: 50%;
         }
         &__cta{
             width: initial;

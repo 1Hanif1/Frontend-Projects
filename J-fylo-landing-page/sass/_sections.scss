@@ -1,0 +1,112 @@
+.section{
+    
+    &__one{
+        background-color: $darkBlueMain;
+        color: $white;
+        font-family: $openSans;
+        text-align: center;
+        padding: 3em 4em;
+        font-size: max(2vw,1.4rem);
+    }
+
+    &__two{
+        background-color: $darkBlueMain;
+        font-size: max(1.4vw,1.2rem);
+        padding: 0em 3em;
+        color: $white;
+        font-family: $openSans;
+        text-align: left;
+        &__image{
+            margin: auto;
+            margin-bottom: 4em;
+        }
+        &__paragraph--one,&__paragraph--two{
+            font-size: max(1.6vw,1.4rem);
+            margin: 1.4em 0em;
+        }
+        &__link{
+            
+            font-size: 1em;
+            a{
+                color: $cyan;
+                display: flex;
+                align-items: center;
+            }
+            img{
+                display: inline;
+                width: 2vw;
+            }
+        }
+    }
+
+}
+
+.feature{
+    margin-bottom: 6em;
+    &__image{
+        width: 24%;
+    }
+    &__title{
+        margin-bottom: 0.6em;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .section__one{
+        display: grid;
+        grid-template-columns: 34% 34%;
+        justify-content: center;
+        gap: 1em 4em;
+        font-size: max(1.2vw,1.2rem);
+        padding-top: 6em;
+    }
+
+    .section__two{
+        font-size: max(1.4vw,1.2rem);
+        padding: 0em 5em;
+        color: $white;
+        font-family: $openSans;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__image{
+            margin-right: 2em;
+            margin-bottom: none;
+            width: 80%;
+        }
+        &__paragraph--one,&__paragraph--two{
+            font-size: max(1.2vw,1.2rem);
+            margin: 1.4em 0em;
+        }
+        &__link{
+            font-size: 1em;
+            a{color: $cyan;}
+            img{
+                display: inline;
+                width: 2vw;
+            }
+        }
+    }
+    
+    .feature{
+        margin-bottom: none;
+        &__image{
+            width: 15%;
+        }
+        &__title{
+            margin-bottom: 0.6em;
+            margin-top: 1em;
+        }
+        &__paragraph{
+            color: hsl(0, 0%, 100%,0.8)
+        }
+
+        &__two{
+            img{
+                width: 12%;
+            }
+        }
+    }
+   }
