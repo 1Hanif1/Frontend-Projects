@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+*,*::before,*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+button{
+    background: none;
+}

@@ -1,0 +1,51 @@
+.header{
+    font-size: max(2.4vw, 1.2em);
+    padding: 3em;
+    text-align: center;
+    color: $white;
+    font-family: $openSans;
+    background: url('../images/bg-curvy-mobile.svg') no-repeat center bottom $darkBlue;
+    background-size: 140%;
+    &__image{
+        margin: 4em 0em;
+    }
+    &__paragraph{
+        margin: 2em 0em;
+        font-size: 1.2em;
+    }
+    &__cta{
+        font-size: 1.2em;
+        color:white;
+        background: linear-gradient(90deg, $cyan, $blue);
+        border:none;
+        width:80%;
+        padding: 0.8em 0em;
+        border-radius: 1.8em;
+        transition: transform ease-in-out 200ms;
+        &:hover{
+            transform: scale(1.1);
+            
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header{
+        font-size: max(1.4vw,1.4rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-size: 100%;
+        &__title, &__paragraph,&__image{
+            width: 40%;
+        }
+        &__cta{
+            width: initial;
+            padding: 0.8em 4em;
+            cursor: pointer;
+        }
+    }
+    
+}

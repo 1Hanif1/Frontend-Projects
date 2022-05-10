@@ -1,0 +1,40 @@
+.nav{
+    display:flex;
+    align-items: center;
+    background-color: $darkBlue;
+    font-size: max(1.4rem, 1.4vw);
+    font-family: $raleway;
+    cursor: pointer;
+    &__links{
+        display: flex;
+        margin-left: auto;
+        color:hsl(0, 0%, 100%,0.6);
+        & > li:hover{
+            transition: color 200ms ease-in-out;
+            color: $white;
+        }
+        & > li:nth-child(2) {
+            margin: 0em 0.8em;
+        }
+    }
+    padding: 1.2em;
+}
+
+.logo__container{
+    width: 24%;
+}
+
+@media screen and (min-width:800px) {
+    .logo__container{
+        width: 8%;
+    }
+    .nav{
+        font-size: max(1.4vw,1.6rem);
+        padding: 2em;
+        &__links{
+            & > li:nth-child(2) {
+                margin: 0em 3.4em;
+            }
+        }
+    }
+}

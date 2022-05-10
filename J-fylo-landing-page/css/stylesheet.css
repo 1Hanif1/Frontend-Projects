@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  background: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: hsl(217deg, 28%, 15%);
+  font-size: max(1.4rem, 1.4vw);
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  padding: 1.2em;
+}
+.nav__links {
+  display: flex;
+  margin-left: auto;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+.nav__links > li:hover {
+  transition: color 200ms ease-in-out;
+  color: hsl(0deg, 0%, 100%);
+}
+.nav__links > li:nth-child(2) {
+  margin: 0em 0.8em;
+}
+
+.logo__container {
+  width: 24%;
+}
+
+@media screen and (min-width: 800px) {
+  .logo__container {
+    width: 8%;
+  }
+
+  .nav {
+    font-size: max(1.4vw, 1.6rem);
+    padding: 2em;
+  }
+  .nav__links > li:nth-child(2) {
+    margin: 0em 3.4em;
+  }
+}
+.header {
+  font-size: max(2.4vw, 1.2em);
+  padding: 3em;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  background: url("../images/bg-curvy-mobile.svg") no-repeat center bottom hsl(217deg, 28%, 15%);
+  background-size: 140%;
+}
+.header__image {
+  margin: 4em 0em;
+}
+.header__paragraph {
+  margin: 2em 0em;
+  font-size: 1.2em;
+}
+.header__cta {
+  font-size: 1.2em;
+  color: white;
+  background: linear-gradient(90deg, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  border: none;
+  width: 80%;
+  padding: 0.8em 0em;
+  border-radius: 1.8em;
+  transition: transform ease-in-out 200ms;
+}
+.header__cta:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    font-size: max(1.4vw, 1.4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-size: 100%;
+  }
+  .header__title, .header__paragraph, .header__image {
+    width: 40%;
+  }
+  .header__cta {
+    width: initial;
+    padding: 0.8em 4em;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
