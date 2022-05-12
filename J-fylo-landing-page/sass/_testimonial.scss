@@ -1,0 +1,66 @@
+.testimonial{
+    font-family: $openSans;
+    background-color: $darkBlueMain;
+    color: $white;
+    padding: 8em 5em;
+    padding-bottom: 1em;
+    position: relative;
+    &__bgquotes{
+        position: absolute;
+        top: 5%;
+        width: min(8vw,3em);
+    }
+    &__card{
+        font-size: max(1.4vw,1.4rem);
+        margin-bottom: 2em;
+        padding: 2em;
+        background-color: $darkBlueTestimonial;
+    }
+
+    &__text{
+        color: rgba(255,255,255,0.9);
+    }
+
+    &__user{
+        display: flex;
+        align-items: center;
+        margin-top: 2em;
+        img{
+            margin-inline-end: 1em;
+            display: inline;
+            width: 18%;
+            border-radius: 50%;
+        }
+        &-name{
+            font-weight: 700;
+        }
+        &-designation{
+            font-weight: 400;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .testimonial{
+        display: flex;
+        padding: 8em;
+        padding-bottom: none;
+        z-index: 0;
+        &__bgquotes{
+            position: absolute;
+            top: 10%;
+            width: 4vw;
+            z-index: -1;
+        }
+        &__card{
+            font-size: max(1.2vw,1.2rem);
+            margin-bottom: unset;
+            padding: 2em;
+            background-color: $darkBlueTestimonial;
+            &:nth-child(3){
+                margin-inline: 2em;
+            }
+        }
+    }  
+}

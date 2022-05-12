@@ -1,0 +1,74 @@
+.early__access{
+    background-color: $darkBlueMain;
+    color: $white;
+    padding: 0em 3em;
+    font-size: max(1.4vw,1.4rem);
+    font-family: $openSans;
+    text-align: center;
+    &-card{
+        margin: auto;
+        background-color: $darkBlueTestimonial;
+        padding: 3em;
+    }
+    &-paragraph{
+        margin-block: 2em;
+    }
+    &-input,&-submit{
+        display: block;
+        width: 100%;
+        height: 3em;
+        border-radius: 3em;
+        font-size: max(1.4vw,1.4rem);
+
+    }
+    &-input{
+        margin-block: 1.4em;
+        padding: 1em;
+    }
+    &-submit{
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $white;
+        font-weight: 700;
+        background: linear-gradient(90deg, $cyan,$blue);
+        transition: transform ease-in-out 300ms;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    .early__access{
+
+        &-card{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            width: 70%;
+            gap: 0em 2em;
+        }
+        &-title,&-paragraph{
+            grid-column: 1 / -1;
+        }
+        &-input,&-submit{
+            display: inline;
+            height: 3em;
+            border-radius: 3em;
+            font-size: max(1.4vw,1.4rem);
+    
+        }
+        &-input{
+            margin-block: unset;
+            padding: 1em;
+            grid-column: 1 / 4;
+        }
+        &-submit{
+            background: none;
+            border: none;
+            color: $white;
+            font-weight: 700;
+            grid-column: 4 / 5;
+            background: linear-gradient(90deg, $cyan,$blue);
+        } 
+    }
+}
