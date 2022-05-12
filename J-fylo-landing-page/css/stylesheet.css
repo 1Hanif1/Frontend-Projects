@@ -32,7 +32,6 @@ a, a:active {
   background-color: hsl(217deg, 28%, 15%);
   font-size: max(1.4rem, 1.4vw);
   font-family: "Raleway", sans-serif;
-  cursor: pointer;
   padding: 1.2em;
 }
 .nav__links {
@@ -40,8 +39,11 @@ a, a:active {
   margin-left: auto;
   color: hsla(0deg, 0%, 100%, 0.6);
 }
-.nav__links > li:hover {
+.nav__links > li {
   transition: color 200ms ease-in-out;
+  cursor: pointer;
+}
+.nav__links > li:hover {
   color: hsl(0deg, 0%, 100%);
 }
 .nav__links > li:nth-child(2) {
@@ -103,6 +105,7 @@ a, a:active {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    background: url("../images/bg-curvy-desktop.svg") no-repeat center bottom hsl(217deg, 28%, 15%);
     background-size: 100%;
   }
   .header__image {
@@ -295,9 +298,11 @@ a, a:active {
   text-align: center;
 }
 .early__access-card {
+  border-radius: 0.6em;
   margin: auto;
   background-color: hsl(219deg, 30%, 18%);
   padding: 3em;
+  transform: translateY(40%);
 }
 .early__access-paragraph {
   margin-block: 2em;
@@ -320,10 +325,10 @@ a, a:active {
   color: hsl(0deg, 0%, 100%);
   font-weight: 700;
   background: linear-gradient(90deg, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
-  transition: transform ease-in-out 300ms;
+  transition: transform ease-in-out 100ms;
 }
-.early__access-submit:hover {
-  transform: scale(1.1);
+.early__access-submit:active {
+  transform: scale(0.95);
 }
 
 @media screen and (min-width: 800px) {
@@ -354,6 +359,57 @@ a, a:active {
     font-weight: 700;
     grid-column: 4/5;
     background: linear-gradient(90deg, hsl(176deg, 68%, 64%), hsl(198deg, 60%, 50%));
+  }
+}
+.footer {
+  background-color: hsl(216deg, 53%, 9%);
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 15em 5em 5em 5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: max(1.4vw, 1.4em);
+}
+.footer li {
+  margin-block-end: 0.5em;
+}
+.footer > * {
+  margin-bottom: 2em;
+}
+.footer__image {
+  width: 30%;
+}
+.footer__address img, .footer__contact img {
+  width: 1em;
+  display: inline;
+  margin-inline-end: 0.4em;
+}
+.footer__address {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+.footer__socials {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__socials > * {
+  border: 0.05em solid hsl(0deg, 0%, 100%);
+  height: fit-content;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 30% 30% 10% 10% 20%;
+    gap: 0em 1em;
+  }
+  .footer__image {
+    grid-column: 1/-1;
+    width: 10%;
   }
 }
 
