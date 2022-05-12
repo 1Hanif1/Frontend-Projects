@@ -6,9 +6,11 @@
     font-family: $openSans;
     text-align: center;
     &-card{
+        border-radius: 0.6em;
         margin: auto;
         background-color: $darkBlueTestimonial;
         padding: 3em;
+        transform: translateY(40%);
     }
     &-paragraph{
         margin-block: 2em;
@@ -32,9 +34,9 @@
         color: $white;
         font-weight: 700;
         background: linear-gradient(90deg, $cyan,$blue);
-        transition: transform ease-in-out 300ms;
-        &:hover{
-            transform: scale(1.1);
+        transition: transform ease-in-out 100ms;
+        &:active{
+            transform: scale(0.95);
         }
     }
 }

@@ -1,0 +1,51 @@
+.footer{
+    background-color: $darkBlueFooter;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 15em 5em 5em 5em;
+    font-family: $openSans;
+    font-size: max(1.4vw,1.4em);
+    & li{
+        margin-block-end: 0.5em;
+    }
+    & > * {
+        margin-bottom: 2em;
+    }
+    &__image{
+        width: 30%;
+    }
+    &__address img, &__contact img {
+        width: 1em;
+        display: inline;
+        margin-inline-end: 0.4em;
+    }
+    &__address{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+    }
+    &__socials{
+        display: flex;
+        justify-content: space-around;
+        & > * {
+            border: 0.05em solid $white;
+            height: fit-content;
+            padding: 0.5em;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .footer{
+        display: grid;
+        grid-template-columns: 30% 30% 10% 10% 20%;
+        gap: 0em 1em;
+        &__image{
+            grid-column: 1/-1;
+            width: 10%;
+        }
+    }
+}

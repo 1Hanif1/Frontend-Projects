@@ -4,13 +4,17 @@
     background-color: $darkBlue;
     font-size: max(1.4rem, 1.4vw);
     font-family: $raleway;
-    cursor: pointer;
+    
     &__links{
         display: flex;
         margin-left: auto;
         color:hsl(0, 0%, 100%,0.6);
-        & > li:hover{
+        & > li {
             transition: color 200ms ease-in-out;
+            cursor: pointer;
+        }
+        & > li:hover{
+            
             color: $white;
         }
         & > li:nth-child(2) {
