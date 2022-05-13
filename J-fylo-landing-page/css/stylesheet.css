@@ -26,6 +26,10 @@ a, a:active {
   color: black;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -78,10 +82,16 @@ a, a:active {
 }
 .header__image {
   margin: 4em 0em;
+  position: relative;
+  animation: Float 3.5s ease-in-out infinite forwards;
+}
+.header__title {
+  animation: FadeInFromUp 2s ease-in-out forwards;
 }
 .header__paragraph {
   margin: 2em 0em;
   font-size: 1.2em;
+  animation: FadeInFromUp 2.4s ease-in-out forwards;
 }
 .header__cta {
   font-size: 1.2em;
@@ -91,6 +101,7 @@ a, a:active {
   width: 80%;
   padding: 0.8em 0em;
   border-radius: 1.8em;
+  animation: FadeInFromUp 2.8s ease-in-out forwards;
   transition: transform ease-in-out 200ms;
 }
 .header__cta:hover {
@@ -139,6 +150,10 @@ a, a:active {
 .section__two__image {
   margin: auto;
   margin-bottom: 4em;
+  transition: transform 1s ease-in-out;
+}
+.section__two__text {
+  transition: transform 1s ease-in-out;
 }
 .section__two__paragraph--one, .section__two__paragraph--two {
   font-size: max(1.6vw, 1.4rem);
@@ -158,6 +173,7 @@ a, a:active {
 }
 
 .feature {
+  transition: opacity 1s ease-in;
   margin-bottom: 6em;
 }
 .feature__image {
@@ -232,6 +248,7 @@ a, a:active {
   padding: 8em 5em;
   padding-bottom: 1em;
   position: relative;
+  transition: transform 1s ease-in-out;
 }
 .testimonial__bgquotes {
   position: absolute;
@@ -243,6 +260,10 @@ a, a:active {
   margin-bottom: 2em;
   padding: 2em;
   background-color: hsl(219deg, 30%, 18%);
+  transition: transform 300ms ease-in-out;
+}
+.testimonial__card:hover {
+  transform: scale(1.05);
 }
 .testimonial__text {
   color: rgba(255, 255, 255, 0.9);
@@ -411,6 +432,48 @@ a, a:active {
     grid-column: 1/-1;
     width: 10%;
   }
+}
+@keyframes Float {
+  from {
+    position: relative;
+    top: 0vw;
+  }
+  50% {
+    position: relative;
+    top: -6vw;
+  }
+  to {
+    position: relative;
+    top: 0vw;
+  }
+}
+@keyframes FadeInFromUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.set-fade-in {
+  opacity: 0;
+}
+
+.set-slide-left {
+  transform: translateX(10%);
+  transition: transform 1s ease-in-out;
+}
+
+.set-slide-right {
+  transform: translateX(-10%);
+  transition: transform 1s ease-in-out;
+}
+
+.set-slide-up {
+  transform: translateY(10%);
+  transition: transform 1s ease-in-out;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
