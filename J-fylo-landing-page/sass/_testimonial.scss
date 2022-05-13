@@ -5,6 +5,7 @@
     padding: 8em 5em;
     padding-bottom: 1em;
     position: relative;
+    transition: transform 1s ease-in-out;
     &__bgquotes{
         position: absolute;
         top: 5%;
@@ -15,6 +16,10 @@
         margin-bottom: 2em;
         padding: 2em;
         background-color: $darkBlueTestimonial;
+        transition: transform 300ms ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 
     &__text{

@@ -19,6 +19,10 @@
         &__image{
             margin: auto;
             margin-bottom: 4em;
+            transition: transform 1s ease-in-out;
+        }
+        &__text{
+            transition: transform 1s ease-in-out;
         }
         &__paragraph--one,&__paragraph--two{
             font-size: max(1.6vw,1.4rem);
@@ -42,6 +46,7 @@
 }
 
 .feature{
+    transition: opacity 1s ease-in;
     margin-bottom: 6em;
     &__image{
         width: 24%;
@@ -75,6 +80,7 @@
             margin-right: 2em;
             margin-bottom: none;
             width: 80%;
+
         }
         &__paragraph--one,&__paragraph--two{
             font-size: max(1.2vw,1.2rem);

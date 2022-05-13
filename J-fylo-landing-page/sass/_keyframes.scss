@@ -1,0 +1,44 @@
+@keyframes Float {
+    from {
+        position: relative;
+        top: 0vw;
+    } 50% {
+        position: relative;
+        top: -6vw;
+    } to {
+        position: relative;
+        top: 0vw;
+    }
+}
+
+@keyframes FadeInFromUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+// Animation classes
+
+.set-fade-in{
+    opacity: 0;
+    // transition: opacity 1s ease-in-out;
+}
+
+.set-slide-left {
+    transform: translateX(10%);
+    transition: transform 1s ease-in-out;
+}
+.set-slide-right {
+    transform: translateX(-10%);
+    transition: transform 1s ease-in-out;
+}
+
+.set-slide-up{
+    transform: translateY(10%);
+    transition: transform 1s ease-in-out;
+}

@@ -8,10 +8,16 @@
     background-size: 140%;
     &__image{
         margin: 4em 0em;
+        position: relative;
+        animation: Float 3.5s ease-in-out  infinite forwards;
+    }
+    &__title{
+        animation: FadeInFromUp 2s ease-in-out forwards;
     }
     &__paragraph{
         margin: 2em 0em;
         font-size: 1.2em;
+        animation: FadeInFromUp 2.4s ease-in-out forwards;
     }
     &__cta{
         font-size: 1.2em;
@@ -21,6 +27,7 @@
         width:80%;
         padding: 0.8em 0em;
         border-radius: 1.8em;
+        animation: FadeInFromUp 2.8s ease-in-out forwards;
         transition: transform ease-in-out 200ms;
         &:hover{
             transform: scale(1.1);
