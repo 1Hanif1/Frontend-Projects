@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: max(1.3vw, 1.4rem);
+  padding: 2em 5em;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  width: 10%;
+}
+.nav__links, .nav__link-sub-part {
+  display: flex;
+}
+.nav__links {
+  flex: 1;
+  color: hsl(257deg, 7%, 63%);
+  font-weight: 700;
+  align-items: center;
+}
+.nav__links > .nav__link {
+  margin-left: 2em;
+  cursor: pointer;
+}
+.nav__links > .nav__link:hover {
+  color: hsl(255deg, 11%, 22%);
+}
+.nav__link-sub-part {
+  margin-inline-start: auto;
+  align-items: center;
+}
+.nav__link-sub-part > * {
+  cursor: pointer;
+}
+.nav__link-sub-part > *:hover {
+  color: hsl(255deg, 11%, 22%);
+}
+.nav__link-cta {
+  margin-left: 2em;
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 0.4em 1.2em;
+  border-radius: 1.2em;
+}
+.nav__link-cta:hover {
+  color: white;
+  opacity: 0.6;
+}
+.nav__hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    padding: 1em;
+    font-size: max(1.6vw, 1.8rem);
+    position: relative;
+  }
+  .nav__logo {
+    width: 40%;
+  }
+  .nav__links {
+    transform: translateX(200%);
+    color: white;
+    border-radius: 1.2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: hsl(257deg, 27%, 26%);
+    top: 24vw;
+    padding: 2em 1em;
+  }
+  .nav__links > .nav__link {
+    margin-left: unset;
+    margin-bottom: 1.2em;
+    cursor: pointer;
+  }
+  .nav__links > .nav__link:hover {
+    color: hsl(255deg, 11%, 22%);
+  }
+  .nav__link-sub-part {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    border-top: 0.02em solid hsl(257deg, 7%, 63%);
+    padding-top: 1em;
+  }
+  .nav__link-cta {
+    margin-left: unset;
+    margin-top: 1.2em;
+    width: 90%;
+    text-align: center;
+  }
+  .nav__hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+.header {
+  padding: 2em 5em;
+  font-size: max(1.3vw, 1.4rem);
+  display: grid;
+  grid-template-columns: 50% 51%;
+}
+.header__title {
+  font-size: 3em;
+  line-height: 1em;
+  color: hsl(257deg, 27%, 26%);
+}
+.header__paragraph {
+  font-size: 1.2em;
+  margin: 1em 0em;
+  color: hsl(257deg, 7%, 63%);
+}
+.header__cta {
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  border-radius: 1.2em;
+  border: none;
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header__cta:hover {
+  opacity: 0.7;
+}
+.header__right {
+  transform: translateX(25%);
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1em;
+  }
+  .header__right {
+    transform: translateX(0%);
+    width: 130%;
+    margin-bottom: 2em;
+  }
+  .header__left {
+    text-align: center;
+  }
+  .header__paragraph {
+    margin: 1.4em;
+  }
+  .header__cta {
+    font-size: 1.4em;
+  }
+}
+.main {
+  background-color: hsla(0deg, 0%, 75%, 0.2);
+  padding: 2em 5em;
+  font-size: max(1.3vw, 1.4rem);
+  margin-top: 4em;
+}
+.main__input {
+  background-color: hsl(257deg, 27%, 26%);
+  padding: 3em 2em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 0.6em;
+  transform: translateY(-70%);
+  background: url(../images/bg-shorten-desktop.svg) no-repeat hsl(257deg, 27%, 26%);
+  background-size: cover;
+}
+.main__input > div {
+  flex: 1;
+}
+.main__input > div input {
+  width: 100%;
+  height: 4vw;
+  font-size: 1em;
+  color: hsl(0deg, 0%, 75%);
+  font-weight: 700;
+  padding: 1em 1.5em;
+  border-radius: 0.6em;
+}
+.main__input > div input:focus {
+  outline: none;
+  border: 0.1em solid hsl(180deg, 66%, 49%);
+}
+.main__input > div > span {
+  display: block;
+  position: absolute;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.8em;
+  color: red;
+  margin-top: 0.2em;
+}
+.main__input > button {
+  background-color: hsl(180deg, 66%, 49%);
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 0.6em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.main__input > button:hover {
+  background-color: hsla(0deg, 0%, 100%, 0.8);
+}
+
+.shortened__link {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.2em;
+  transform: translateY(-100%);
+  margin-bottom: 1em;
+}
+.shortened__link-short {
+  display: flex;
+  align-items: center;
+}
+.shortened__link-short p {
+  color: hsl(180deg, 66%, 49%);
+}
+.shortened__link-short span {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 0.4em 2em;
+  margin-left: 1em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.shortened__link-short span:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 1em;
+    margin-top: 14em;
+  }
+  .main__input {
+    flex-direction: column;
+    padding: 2em 1em;
+    background: url(../images/bg-shorten-mobile.svg) no-repeat hsl(257deg, 27%, 26%);
+    background-size: 70%;
+    background-position: top right;
+  }
+  .main__input > div {
+    width: 100%;
+  }
+  .main__input > div input {
+    height: 3em;
+  }
+  .main__input > button {
+    margin-top: 2em;
+    margin-left: unset;
+    width: 100%;
+  }
+
+  .shortened__link {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    transform: translateY(-90%);
+    margin-bottom: 1em;
+  }
+  .shortened__link-main {
+    width: 100%;
+  }
+  .shortened__link-short {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .shortened__link-short p {
+    color: hsl(180deg, 66%, 49%);
+    width: 100%;
+    margin-block: 0.8em;
+  }
+  .shortened__link-short span {
+    display: block;
+    background-color: hsl(180deg, 66%, 49%);
+    color: white;
+    padding: 0.2em 1.5em;
+    width: 100%;
+    text-align: center;
+    margin-left: unset;
+    border-radius: 0.2em;
+    cursor: pointer;
+  }
+  .shortened__link-short span:hover {
+    opacity: 0.7;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
