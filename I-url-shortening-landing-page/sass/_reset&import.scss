@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 *,*::before,*::after{
     padding: 0;
     margin: 0;
@@ -10,4 +11,20 @@ html{
 
 ul{
     list-style: none;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    overflow-x:hidden;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+::-webkit-scrollbar{
+    display: none;
 }

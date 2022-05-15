@@ -1,0 +1,157 @@
+.main{
+    background-color: hsl(0, 0%, 75%,0.2);
+    padding: 2em 5em;
+    font-size: max(1.3vw,1.4rem);
+    margin-top: 4em;
+    
+    &__input{
+        background-color: $darkViolet;
+        padding: 3em 2em;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 0.6em;
+        transform: translateY(-70%);
+        background: url(../images/bg-shorten-desktop.svg) no-repeat $darkViolet;
+        background-size: cover;
+        & > div {
+            flex: 1;
+            input{
+                width: 100%;
+                height: 4vw;
+                font-size: 1em;
+                color: $gray;
+                font-weight: 700;
+                padding: 1em 1.5em;
+                border-radius: 0.6em;
+
+                &:focus{
+                    outline: none;
+                    border: 0.1em solid $cyan;
+                }
+            }
+            
+            & > span{
+                display: block;
+                position: absolute;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 0.8em;
+                color: red;
+                margin-top: 0.2em;
+            }
+        }
+
+
+        & > button{
+            background-color: $cyan;
+            font-weight: 700;
+            font-size: 1em;
+            color: white;
+            border: none;
+            padding: 0.9em 2em;
+            border-radius: 0.6em;
+            margin-left: 1em;
+            cursor: pointer;
+
+            &:hover{
+                background-color: hsl(0, 0%, 100%,0.8);
+            }
+        }
+    }
+}
+.shortened__link{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.2em;
+    transform: translateY(-100%);
+    margin-bottom: 1em;
+    &-short{
+        display: flex;
+        align-items: center;
+        p {
+            color: $cyan;
+        }
+        span {
+            background-color: $cyan;
+            color: white;
+            padding:0.4em 2em;
+            margin-left: 1em;
+            border-radius: 0.2em;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .main{
+        padding: 1em;
+        margin-top: 14em;
+        &__input{
+            flex-direction: column;
+            padding: 2em 1em;
+            background:url(../images/bg-shorten-mobile.svg) no-repeat $darkViolet;
+            background-size: 70%;
+            background-position: top right;
+            & > div {
+                width: 100%;
+                input{
+                    height: 3em;
+                }
+            }
+
+            & > button {
+                margin-top: 2em;
+                margin-left: unset;
+                width: 100%;
+            }
+        }
+    }
+
+    .shortened__link{
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8em;
+        border-radius: 0.2em;
+        transform: translateY(-90%);
+        margin-bottom: 1em;
+        &-main{
+            width: 100%;
+        }
+        &-short{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            p {
+                color: $cyan;
+                width: 100%;
+                margin-block: 0.8em;
+            }
+            span {
+                display: block;
+                background-color: $cyan;
+                color: white;
+                padding:0.2em 1.5em;
+                width: 100%;
+                text-align: center;
+                margin-left: unset;
+                border-radius: 0.2em;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,54 @@
+.header{
+    padding: 2em 5em;
+    font-size: max(1.3vw,1.4rem);
+    display: grid;
+    grid-template-columns: 50% 51%;
+    &__title{
+        font-size: 3em;
+        line-height: 1em;
+        color: $darkViolet;
+    }
+    &__paragraph{
+        font-size: 1.2em;
+        margin: 1em 0em;
+        color: $grayishViolet;
+    }
+    &__cta{
+        font-size: 1.2em;
+        padding: 0.5em 1em;
+        border-radius: 1.2em;
+        border: none;
+        background-color: $cyan;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    &__right{
+        transform: translateX(25%);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .header{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1em;
+        &__right{
+            transform: translateX(0%);
+            width: 130%;
+            margin-bottom: 2em;
+        }
+        &__left{
+            text-align: center;
+        }
+        &__paragraph{
+            margin: 1.4em;
+        }
+        &__cta{
+            font-size: 1.4em;
+        }
+    }
+}

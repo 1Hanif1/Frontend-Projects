@@ -1,0 +1,105 @@
+.nav {
+    
+    display: flex;
+    align-items: center;
+    font-size: max(1.3vw,1.4rem);
+    padding: 2em 5em;
+    &__logo{
+        display: flex;
+        align-items: center;
+        width: 10%;
+    }
+    &__links, &__link-sub-part{
+        display: flex;
+    }
+    &__links{
+        flex: 1;
+        color: $grayishViolet;
+        font-weight: 700;
+        align-items: center;
+        & > .nav__link{
+            margin-left: 2em;
+            cursor: pointer;
+            &:hover{
+                color: $veryDarkBlue;
+            }
+        }
+    }
+    &__link-sub-part{
+        margin-inline-start: auto;
+        align-items: center;
+        & > *{
+            cursor: pointer;
+            &:hover{
+                color: $veryDarkBlue;
+            }
+        }
+    }
+    &__link-cta{
+        margin-left: 2em;
+        background-color: $cyan;
+        color: white;
+        padding: 0.4em 1.2em;
+        border-radius: 1.2em;
+        &:hover{
+            color: white;
+            opacity: 0.6;
+        }
+    }
+    &__hamburger{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .nav{
+        padding: 1em ;
+        
+        font-size: max(1.6vw,1.8rem);
+        position: relative;
+        &__logo{
+            width: 40%;
+        }
+        &__links{
+            transform: translateX(200%);
+
+            color: white;
+            border-radius: 1.2rem;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            background-color: $darkViolet;
+            top: 24vw;
+            padding: 2em 1em;
+            & > .nav__link{
+                margin-left: unset;
+                margin-bottom: 1.2em;
+                cursor: pointer;
+                &:hover{
+                    color: $veryDarkBlue;
+                }
+            }
+        }
+        &__link-sub-part{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            border-top: 0.02em solid $grayishViolet;
+            padding-top: 1em;
+        }
+        &__link-cta{
+            margin-left: unset;
+            margin-top: 1.2em;
+            width: 90%;
+            text-align: center;
+        }
+        &__hamburger{
+            display: block;
+            margin-left: auto;
+        }
+    }    
+
+}
