@@ -32,6 +32,49 @@ img {
   display: none;
 }
 
+@keyframes SlideFromLeft {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes HeaderImage {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(25%);
+  }
+}
+@keyframes HeaderImageMobile {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes PopIn {
+  from {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}
+.hide-nav {
+  display: none;
+  opacity: 0;
+}
+
+.hide {
+  opacity: 0;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -85,16 +128,21 @@ img {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .nav {
     padding: 1em;
     font-size: max(1.6vw, 1.8rem);
-    position: relative;
   }
   .nav__logo {
     width: 40%;
+    z-index: -10;
   }
   .nav__links {
-    visibility: hidden;
+    z-index: 2;
+    transition: opacity 500ms ease-in-out;
     color: white;
     border-radius: 1.2rem;
     position: absolute;
@@ -103,6 +151,7 @@ img {
     width: 80%;
     background-color: hsl(257deg, 27%, 26%);
     top: 24vw;
+    left: 10%;
     padding: 2em 1em;
   }
   .nav__links > .nav__link {
@@ -143,13 +192,16 @@ img {
   font-size: 3em;
   line-height: 1em;
   color: hsl(257deg, 27%, 26%);
+  animation: SlideFromLeft 800ms ease-in-out;
 }
 .header__paragraph {
   font-size: 1.2em;
   margin: 1em 0em;
   color: hsl(257deg, 7%, 63%);
+  animation: SlideFromLeft 800ms ease-in-out;
 }
 .header__cta {
+  animation: SlideFromLeft 800ms ease-in-out;
   font-size: 1.2em;
   padding: 0.5em 1em;
   border-radius: 1.2em;
@@ -164,6 +216,7 @@ img {
 }
 .header__right {
   transform: translateX(25%);
+  animation: HeaderImage 1000ms ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
@@ -176,6 +229,7 @@ img {
     transform: translateX(0%);
     width: 130%;
     margin-bottom: 2em;
+    animation: HeaderImageMobile 1000ms ease-in-out;
   }
   .header__left {
     text-align: center;
@@ -218,6 +272,7 @@ img {
   font-weight: 700;
   padding: 1em 1.5em;
   border-radius: 0.6em;
+  color: black;
 }
 .main__input > div input:focus {
   outline: none;
@@ -244,10 +299,12 @@ img {
   cursor: pointer;
 }
 .main__input > button:hover {
-  background-color: hsla(0deg, 0%, 100%, 0.8);
+  background-color: white;
+  color: hsl(180deg, 66%, 49%);
 }
 
 .shortened__link {
+  animation: PopIn 800ms ease-in-out;
   display: flex;
   background-color: white;
   justify-content: space-between;
@@ -310,6 +367,7 @@ img {
     border-radius: 0.2em;
     transform: translateY(-90%);
     margin-bottom: 1em;
+    font-size: 1em;
   }
   .shortened__link-main {
     width: 100%;
@@ -534,7 +592,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .footer__logo {
     grid-column: 1/3;
