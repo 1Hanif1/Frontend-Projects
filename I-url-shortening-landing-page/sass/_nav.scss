@@ -53,17 +53,20 @@
 }
 
 @media screen and (max-width: 800px) {
+    body{
+        overflow-x: hidden;
+    }
     .nav{
         padding: 1em ;
-        
         font-size: max(1.6vw,1.8rem);
-        position: relative;
+        // position: relative;
         &__logo{
             width: 40%;
+            z-index: -10;
         }
         &__links{
-            // transform: translateX(200%);
-            visibility: hidden; ///////////
+            z-index: 2;
+            transition: opacity 500ms ease-in-out;
             color: white;
             border-radius: 1.2rem;
             position: absolute;
@@ -72,6 +75,7 @@
             width: 80%;
             background-color: $darkViolet;
             top: 24vw;
+            left: 10%;
             padding: 2em 1em;
             & > .nav__link{
                 margin-left: unset;

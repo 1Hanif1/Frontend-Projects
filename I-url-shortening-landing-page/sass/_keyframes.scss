@@ -1,0 +1,41 @@
+@keyframes SlideFromLeft {
+    from{
+        transform: translateX(-10%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes HeaderImage {
+    from {
+        transform: translateX(50%);
+    } to {
+        transform: translateX(25%);
+    }
+}
+
+@keyframes HeaderImageMobile {
+    from {
+        transform: translateX(50%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes PopIn {
+    from{
+        opacity: 0;
+        transform: translateY(0%);
+    } to {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+}
+
+.hide-nav{
+    display: none;
+    opacity: 0;
+}
+.hide{
+    opacity: 0;
+}

@@ -24,7 +24,7 @@
                 font-weight: 700;
                 padding: 1em 1.5em;
                 border-radius: 0.6em;
-
+                color: black;
                 &:focus{
                     outline: none;
                     border: 0.1em solid $cyan;
@@ -55,12 +55,14 @@
             cursor: pointer;
 
             &:hover{
-                background-color: hsl(0, 0%, 100%,0.8);
+                background-color: white;
+                color: $cyan
             }
         }
     }
 }
 .shortened__link{
+    animation: PopIn 800ms ease-in-out;
     display: flex;
     background-color: white;
     justify-content: space-between;
@@ -124,6 +126,7 @@
         border-radius: 0.2em;
         transform: translateY(-90%);
         margin-bottom: 1em;
+        font-size: 1em;
         &-main{
             width: 100%;
         }
