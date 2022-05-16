@@ -3,6 +3,7 @@
     font-size: max(1.3vw,1.4rem);
     display: grid;
     grid-template-columns: 50% 51%;
+    overflow-x: hidden;
     &__title{
         font-size: 3em;
         line-height: 1em;
@@ -49,6 +50,9 @@
         }
         &__cta{
             font-size: 1.4em;
+        }
+        &__title{
+            font-size: 2.4em;
         }
     }
 }

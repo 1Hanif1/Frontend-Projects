@@ -62,8 +62,8 @@
             width: 40%;
         }
         &__links{
-            transform: translateX(200%);
-
+            // transform: translateX(200%);
+            visibility: hidden; ///////////
             color: white;
             border-radius: 1.2rem;
             position: absolute;
