@@ -32,3 +32,7 @@ So based on these naming I have named my projects in " _difficulty_-**project-na
 - Coding bootcamp testimonials slider ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-Coding-bootcamp-testimonials-slider/)
 - Dashboard with theme swithcer ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-dashboard-with-theme-switcher/)
 - Fylo Landing Page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/J-fylo-landing-page/)
+
+### Intermediate
+
+- Url shortener landing page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/I-url-shortening-landing-page/)
