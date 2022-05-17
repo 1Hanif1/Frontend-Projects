@@ -43,23 +43,6 @@ const getShortenedLink = async function (link) {
     }
     renderHtml(dataJson["result"])
 }
-/**
- * {
-    "ok": true,
-    "result": {
-        "code": "I8ryml",
-        "short_link": "shrtco.de/I8ryml",
-        "full_short_link": "https://shrtco.de/I8ryml",
-        "short_link2": "9qr.de/I8ryml",
-        "full_short_link2": "https://9qr.de/I8ryml",
-        "short_link3": "shiny.link/I8ryml",
-        "full_short_link3": "https://shiny.link/I8ryml",
-        "share_link": "shrtco.de/share/I8ryml",
-        "full_share_link": "https://shrtco.de/share/I8ryml",
-        "original_link": "https://www.frontendmentor.com"
-    }
-}
- */
 
 shortenBtn.addEventListener('click', () => {
     let userInput = inputBox.value;
@@ -67,13 +50,25 @@ shortenBtn.addEventListener('click', () => {
         showError()
         return
     }
-
-    // Make API Call
     getShortenedLink(userInput)
+    inputBox.value = ''
+})
+
+linksContainer.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('copy__button')) return
+    let copyBtn = e.target
+    let shortLink = copyBtn.closest('.shortened__link-short').querySelector('p').textContent;
+    copyBtn.style.backgroundColor = "hsl(257, 27%, 26%)"
+    copyBtn.textContent = "Copied!"
+    navigator.clipboard.writeText(shortLink)
+    setTimeout(() => {
+        copyBtn.style.backgroundColor = ""
+        copyBtn.textContent = "Copy"
+    }, 1000)
 })
 
 window.addEventListener('load', () => {
-    if (window.innerWidth < 800)
-        navigationLinks.classList.add('hide-nav')
+    if (window.innerWidth > 800)
+        navigationLinks.classList.remove('hide-nav')
     inputError.classList.add('hide')
 })
