@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.image {
+  width: 100%;
+  height: 20vw;
+  overflow: hidden;
+}
+
+.main {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4vw;
+  position: absolute;
+  width: fit-content;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0em 2em 0em;
+  letter-spacing: 0.6em;
+  color: white;
+}
+.main__header .toggle {
+  width: 2vw;
+  cursor: pointer;
+}
+.main__input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.7em 0.8em;
+  border-radius: 0.2em;
+  background-color: white;
+  transition: transform 200ms ease-in-out;
+}
+.main__input:hover {
+  transform: scale(1.05);
+}
+.main__input .circle {
+  width: 2vw;
+  height: 2vw;
+  border: 0.08em solid hsl(236deg, 33%, 92%);
+  border-radius: 50%;
+  margin-inline-end: 0.5em;
+}
+.main__input input {
+  border: none;
+  font-size: 0.8em;
+  width: 40vw;
+}
+.main__input input::placeholder {
+  color: hsl(234deg, 11%, 52%);
+}
+.main__input input:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
