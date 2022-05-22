@@ -17,17 +17,45 @@
   </figure>
 
   <main class="main">
+
     <div class="main__header">
       <h1 class="title">TODO</h1>
       <figure class="toggle">
         <img src="./images/icon-sun.svg" alt="/">
       </figure>
     </div>
+
     <div class="main__input">
       <div class="circle"></div>
       <input type="text" placeholder="Create a new todo...">
     </div>
-    <div class="main__tasks"></div>
+
+    <div class="main__tasks">
+      <div class="task__container " data-id="1">
+        <div class="circle done"></div>
+        <div class="task done">Complete Online JavaScript Course</div>
+      </div>
+      <div class="task__container" data-id="1">
+        <div class="circle"></div>
+        <div class="task">10 minutes meditation</div>
+      </div>
+      <div class="task__container" data-id="1">
+        <div class="circle"></div>
+        <div class="task">Read for 1 hour</div>
+      </div>
+
+      <div class="controls">
+        <div class="items"><span>5</span> items left</div>
+
+        <div class="sorting">
+          <div class="all">All</div>
+          <div class="active">Active</div>
+          <div class="completed">Completed</div>
+        </div>
+
+        <div class="clear">Clear Completed</div>
+      </div>
+    </div>
   </main>
 </body>
 
