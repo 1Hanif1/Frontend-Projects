@@ -4,6 +4,7 @@
     overflow: hidden;
 }
 .main{
+    
     font-family: $font;
     font-size: 1.4vw;
     position: absolute;
@@ -26,34 +27,107 @@
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 0.7em 0.8em;
+        padding: 1em;
         border-radius: 0.2em;
         background-color: white;
         transition: transform 200ms ease-in-out;
         &:hover {
             transform: scale(1.05);
+
         }
         .circle{
             width: 2vw;
             height: 2vw;
             border: 0.08em solid $veryLightGrayishBlue;
             border-radius: 50%;
-            margin-inline-end: 0.5em;
+            margin-inline-end: 1em;
             
         }
 
         input{
             border: none;
-            font-size: 0.8em;
-            // width: 100%;
+            font-size: 1em;
             width: 40vw;
+            font-family: $font;
             &::placeholder{
                 color: $darkGrayishBlue;
+                font-family: $font;
             }
             &:focus{
                 outline: none;
             }
         }
     }
+
+    &__tasks{
+        
+        width: 100%;
+        margin-top: 1.4em;
+        border-radius: 0.2em;
+        box-shadow: 0em 2em 6em -4em $veryDarkGrayishBlue;
+        .task__container{
+            border-radius: 0.2em;
+            background-color: white;
+            padding: 1em;
+            border-bottom: 0.02em solid $lightGrayishBlue;
+            display: flex;
+            align-items: center;
+           
+            .circle{
+                width: 2vw;
+                height: 2vw;
+                border: 0.08em solid $veryLightGrayishBlue;
+                border-radius: 50%;
+                margin-inline-end: 1em;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &:hover{
+                cursor: pointer;
+                transition: transform 200ms ease-in-out;
+                transform: scale(1.05);
+                box-shadow: 0px 0px 0.2em -0.1em rgb(73, 73, 73);
+            }
+
+        }
+        .controls{
+            font-size: 0.8em;
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            color: $darkGrayishBlue;
+            .sorting{
+                display: flex;
+                font-weight: bold;
+                .all, .active, .completed{
+                    &:hover{
+                        color:$veryDarkGrayishBlue2;
+                        cursor: pointer;
+                    }
+                }
+                .active{
+                    margin-inline: 1em;
+                }
+            }
+
+            .clear{
+                cursor: pointer;
+                
+                &:hover{
+                    color: $veryDarkGrayishBlue2;
+                    
+                }
+            }
+        }
+    }
 }
 
+.circle.done{
+    background:  url(../images/icon-check.svg), linear-gradient(130deg, $lightBlue,$brightBlue);
+}
+.task.done{
+    text-decoration: line-through;
+    color: $lightGrayishBlue;
+    transition: color 200ms ease-in-out;
+
+}
