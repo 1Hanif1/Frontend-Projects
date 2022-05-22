@@ -48,7 +48,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0.7em 0.8em;
+  padding: 1em;
   border-radius: 0.2em;
   background-color: white;
   transition: transform 200ms ease-in-out;
@@ -61,18 +61,83 @@ body {
   height: 2vw;
   border: 0.08em solid hsl(236deg, 33%, 92%);
   border-radius: 50%;
-  margin-inline-end: 0.5em;
+  margin-inline-end: 1em;
 }
 .main__input input {
   border: none;
-  font-size: 0.8em;
+  font-size: 1em;
   width: 40vw;
+  font-family: "Josefin Sans", sans-serif;
 }
 .main__input input::placeholder {
   color: hsl(234deg, 11%, 52%);
+  font-family: "Josefin Sans", sans-serif;
 }
 .main__input input:focus {
   outline: none;
+}
+.main__tasks {
+  width: 100%;
+  margin-top: 1.4em;
+  border-radius: 0.2em;
+  box-shadow: 0em 2em 6em -4em hsl(235deg, 19%, 35%);
+}
+.main__tasks .task__container {
+  border-radius: 0.2em;
+  background-color: white;
+  padding: 1em;
+  border-bottom: 0.02em solid hsl(234deg, 39%, 85%);
+  display: flex;
+  align-items: center;
+}
+.main__tasks .task__container .circle {
+  width: 2vw;
+  height: 2vw;
+  border: 0.08em solid hsl(236deg, 33%, 92%);
+  border-radius: 50%;
+  margin-inline-end: 1em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main__tasks .task__container:hover {
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 0.2em -0.1em rgb(73, 73, 73);
+}
+.main__tasks .controls {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  color: hsl(234deg, 11%, 52%);
+}
+.main__tasks .controls .sorting {
+  display: flex;
+  font-weight: bold;
+}
+.main__tasks .controls .sorting .all:hover, .main__tasks .controls .sorting .active:hover, .main__tasks .controls .sorting .completed:hover {
+  color: hsl(237deg, 14%, 26%);
+  cursor: pointer;
+}
+.main__tasks .controls .sorting .active {
+  margin-inline: 1em;
+}
+.main__tasks .controls .clear {
+  cursor: pointer;
+}
+.main__tasks .controls .clear:hover {
+  color: hsl(237deg, 14%, 26%);
+}
+
+.circle.done {
+  background: url(../images/icon-check.svg), linear-gradient(130deg, hsl(192deg, 100%, 67%), hsl(220deg, 98%, 61%));
+}
+
+.task.done {
+  text-decoration: line-through;
+  color: hsl(234deg, 39%, 85%);
+  transition: color 200ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
