@@ -8,12 +8,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Todo app</title>
+  <script defer src="./js/script.js"></script>
 </head>
 
 <body>
 
   <figure class="image">
-    <img src="./images/bg-desktop-light.jpg" alt="/">
+    <img class="bg-desktop" src="./images/bg-desktop-light.jpg" alt="/">
+    <img class="bg-mobile" src="./images/bg-mobile-light.jpg" alt="/">
   </figure>
 
   <main class="main">
@@ -27,25 +29,14 @@
 
     <div class="main__input">
       <div class="circle"></div>
-      <input type="text" placeholder="Create a new todo...">
+      <input class="userInput" name="uinput" type="text" placeholder="Create a new todo...">
+
     </div>
 
     <div class="main__tasks">
-      <div class="task__container " data-id="1">
-        <div class="circle done"></div>
-        <div class="task done">Complete Online JavaScript Course</div>
-      </div>
-      <div class="task__container" data-id="1">
-        <div class="circle"></div>
-        <div class="task">10 minutes meditation</div>
-      </div>
-      <div class="task__container" data-id="1">
-        <div class="circle"></div>
-        <div class="task">Read for 1 hour</div>
-      </div>
 
       <div class="controls">
-        <div class="items"><span>5</span> items left</div>
+        <div class="items"><span class="totalTask">--</span> items left</div>
 
         <div class="sorting">
           <div class="all">All</div>
