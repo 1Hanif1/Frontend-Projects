@@ -104,6 +104,7 @@ body {
   margin-inline-end: 1em;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 .main__tasks .task__container:hover {
   transition: transform 200ms ease-in-out;
