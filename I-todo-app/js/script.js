@@ -1,22 +1,5 @@
 'use strict';
-let localStorageTasks, taskCount;
-/**
- * Things to implement:
- * Insert new todos ~
- * save todos ~
- * mark as complete
- * delete todos
- * sort todos
- * clear completed todos
- * show number of todos
- * Switch themes
- */
-const userInput = document.querySelector('.userInput');
-const taskContainer = document.querySelector('.main__tasks');
 
-const clearAllTasks = function () {
-    taskContainer.querySelectorAll()
-}
 const deleteTask = function (todoDiv) {
     const todoTask = todoDiv.querySelector('.task').textContent;
     todoDiv.remove()
@@ -61,10 +44,50 @@ const markTask = function (todoDiv) {
         localStorage.setItem('tasks', JSON.stringify(localStorageTasks));
     }
 }
-taskContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('cross')) deleteTask(e.target.closest('.task__container'));
-    if (e.target.classList.contains('circle')) markTask(e.target.closest('.task__container'));
-})
+
+const clearCompleted = function () {
+    const completedTasks = document.querySelectorAll('.task__container.done');
+    completedTasks.forEach(taskContainer => {
+
+        let id = +taskContainer.dataset.id;
+        taskContainer.remove();
+        delete localStorageTasks[id];
+        localStorage.setItem('tasks', JSON.stringify(localStorageTasks));
+    })
+    containerVisible();
+    countTasks();
+}
+
+const hideTasks = function () {
+    const allTasks = document.querySelectorAll('.task__container');
+    allTasks.forEach(task => task.remove());
+}
+
+const showAll = function () {
+    hideTasks();
+    loadTasks();
+
+}
+
+const resetSortBtns = function () {
+    document.querySelectorAll('.sort').forEach(btn => btn.style.color = '');
+}
+
+const showActive = function () {
+    showAll();
+    const completedTasks = document.querySelectorAll('.task__container.done')
+    completedTasks.forEach(task => task.style.display = 'none')
+
+}
+
+const showCompleted = function () {
+    showAll();
+    const Tasks = document.querySelectorAll('.task__container')
+    Tasks.forEach(task => {
+        if (!task.classList.contains('done')) task.style.display = 'none';
+    })
+
+}
 
 const countTasks = function () {
     let totalTask = document.querySelectorAll('.task__container ').length;
@@ -88,15 +111,6 @@ const renderTask = function (task, id, status) {
     `
     taskContainer.insertAdjacentHTML('afterbegin', html);
 }
-userInput.addEventListener('keydown', function (e) {
-    if (!(e.key === "Enter") || userInput.value.trim() === '') return;
-    let task = userInput.value;
-    ++taskCount;
-    saveTask(task, taskCount);
-    renderTask(task, taskCount, false);
-    containerVisible();
-    countTasks();
-})
 
 const loadTasks = function () {
     localStorageTasks = localStorage.getItem('tasks');
@@ -110,18 +124,42 @@ const loadTasks = function () {
             let task = localStorageTasks[id]["todo"];
             let status = localStorageTasks[id]["completed"]
             renderTask(task, id, status);
-            taskCount = id;
+            taskCount = id ? id : 0;
         }
         countTasks();
     }
 }
+
 const containerVisible = function () {
     if (Object.keys(localStorageTasks).length > 0)
         taskContainer.style.visibility = 'visible';
     else
         taskContainer.style.visibility = 'hidden';
 }
+
+taskContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('cross')) deleteTask(e.target.closest('.task__container'));
+    if (e.target.classList.contains('circle')) markTask(e.target.closest('.task__container'));
+    if (e.target.classList.contains('clear')) clearCompleted();
+    if (e.target.classList.contains('all')) resetSortBtns() || (e.target.style.color = 'hsl(220, 98%, 61%)') && showAll();
+    if (e.target.classList.contains('active')) resetSortBtns() || (e.target.style.color = 'hsl(220, 98%, 61%)') && showActive();
+    if (e.target.classList.contains('completed')) resetSortBtns() || (e.target.style.color = 'hsl(220, 98%, 61%)') && showCompleted();
+})
+
+userInput.addEventListener('keydown', function (e) {
+    if (!(e.key === "Enter") || userInput.value.trim() === '') return;
+    let task = userInput.value;
+    userInput.value = '';
+    ++taskCount;
+    saveTask(task, taskCount);
+    renderTask(task, taskCount, false);
+    containerVisible();
+    countTasks();
+})
+
+
 window.addEventListener('load', function () {
+    taskCount = 0;
     loadTasks();
     containerVisible();
 })
