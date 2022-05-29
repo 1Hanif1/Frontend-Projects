@@ -9,14 +9,17 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Frontend Mentor | Todo app</title>
   <script defer src="./js/variables.js"></script>
+  <script defer src="./js/functions.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
 <body>
 
   <figure class="image">
-    <img class="bg-desktop" src="./images/bg-desktop-light.jpg" alt="/">
-    <img class="bg-mobile" src="./images/bg-mobile-light.jpg" alt="/">
+    <img class="bg-desktop bg-d-l" src="./images/bg-desktop-light.jpg" alt="/">
+    <img class="bg-desktop bg-d-d hide" src="./images/bg-desktop-dark.jpg" alt="/">
+    <img class="bg-mobile bg-m-l" src="./images/bg-mobile-light.jpg" alt="/">
+    <img class="bg-mobile bg-m-d hide" src="./images/bg-mobile-dark.jpg" alt="/">
   </figure>
 
   <main class="main">
@@ -24,7 +27,8 @@
     <div class="main__header">
       <h1 class="title">TODO</h1>
       <figure class="toggle">
-        <img src="./images/icon-sun.svg" alt="/">
+        <img class="sun " src="./images/icon-sun.svg" alt="/">
+        <img class="moon hide" src="./images/icon-moon.svg" alt="/">
       </figure>
     </div>
 
