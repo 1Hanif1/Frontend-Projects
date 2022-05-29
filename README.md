@@ -36,3 +36,4 @@ So based on these naming I have named my projects in " _difficulty_-**project-na
 ### Intermediate
 
 - Url shortener landing page ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/I-url-shortening-landing-page/)
+- Todo list app ~ [**Live Demo**](https://1hanif1.github.io/Frontend-Projects/I-todo-app/)
