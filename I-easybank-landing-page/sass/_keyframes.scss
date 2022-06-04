@@ -1,0 +1,52 @@
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fade-up {
+    from{
+        visibility: hidden;
+        transform: translate(-50%,20%);
+        opacity: 0;
+    }
+    to{
+        visibility: visible;
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+}
+@keyframes fade-down{
+    from{
+        visibility: visible;
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+    to{
+        visibility: hidden;
+        transform: translate(-50%,20%);
+        opacity: 0;
+    }
+}
+
+.fade-down{
+    animation: fade-down ease-in-out 300ms forwards;
+}
+
+.fade-out{
+    animation: fade-out ease-in-out 300ms forwards;
+}

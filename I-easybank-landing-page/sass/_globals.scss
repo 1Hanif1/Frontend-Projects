@@ -14,16 +14,28 @@ body{
     font-family: 'Public Sans', sans-serif;
     font-size: $font-med;
     font-weight: 300;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 
 a, a:visited,a:hover{
     text-decoration: none;
 }
 
+.container{
+    padding: 0rem 1.5rem;
+}
+
 // Flex Box
 
 .flex{
     display: flex;
+
+    &-fd-c{
+        flex-direction: column;
+    }
 
     &-jc-sb{
         justify-content: space-between;
