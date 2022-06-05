@@ -14,10 +14,18 @@ body{
     font-family: 'Public Sans', sans-serif;
     font-size: $font-med;
     font-weight: 300;
-
+    color:$grayishBlue;
     &.no-scroll{
         overflow: hidden;
     }
+    @include breakpoint-up(large){
+        font-size: $font-med;
+        overflow-x: hidden;
+    }
+}
+
+h1,h2,h3{
+    margin-top: 0;
 }
 
 a, a:visited,a:hover{
@@ -25,7 +33,35 @@ a, a:visited,a:hover{
 }
 
 .container{
-    padding: 0rem 1.5rem;
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &-pa{
+        padding: 2.25rem 1.5rem;
+    }
+
+    &-py{
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &-px{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &-pt{
+        padding-top: 2.25rem;
+    }
+    &-pb{
+        padding-bottom: 2.25rem;
+    }
+    &-pr{
+        padding-right: 1.5rem;
+    }
+    &-pl{
+        padding-left: 1.5rem;
+    }
 }
 
 // Flex Box
@@ -52,6 +88,7 @@ a, a:visited,a:hover{
 
 // Buttons
 button, .button{
+    display: inline-block;
     padding: 0.875rem 2.1785rem;
     background: linear-gradient(to right,$limeGreen,$brightCyan);
     border-radius: 50px;
@@ -59,6 +96,12 @@ button, .button{
     border: none;
     color: $white;
     font-weight: 400;
+    font-size: $font-small;
+    color: $white;
+    transition: opacity 300ms ease-in-out;
+    &:hover{
+        opacity: 0.75;
+    }
 }
 
 //Visiblity

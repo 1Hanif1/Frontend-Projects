@@ -43,6 +43,30 @@
     }
 }
 
+@keyframes slide-from-left {
+    from{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes from-top-right {
+    from{
+        background-size: 74%;
+        background-position: center 100%;
+        left: 50%;
+    }
+    to{
+        background-size: 94%;
+        background-position: center 150%;
+        left: 25%;
+    }
+}
+
 .fade-down{
     animation: fade-down ease-in-out 300ms forwards;
 }

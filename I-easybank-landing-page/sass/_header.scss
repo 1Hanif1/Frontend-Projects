@@ -1,5 +1,5 @@
 .header{
-
+    z-index: 0;
     &.open{
 
         .overlay{
@@ -85,15 +85,8 @@
         }
     }
 
-    &__cta{
-        color: $white;
-        transition: opacity 300ms ease-in-out;
-        &:hover{
-            opacity: 0.75;
-        }
-    }
-
     &__menu{
+        z-index: 1;
         visibility: hidden;
         background-color: $white;
         padding-top: 1.0625rem;
@@ -115,6 +108,7 @@
 
 
 .overlay{
+    z-index: 1;
     visibility: hidden;
     position: fixed;
     top: 3.75rem;
