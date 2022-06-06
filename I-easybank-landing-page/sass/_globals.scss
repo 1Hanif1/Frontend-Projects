@@ -18,16 +18,42 @@ body{
     &.no-scroll{
         overflow: hidden;
     }
+    overflow-x: hidden;
     @include breakpoint-up(large){
         font-size: $font-med;
-        overflow-x: hidden;
+        
     }
 }
 
 h1,h2,h3{
     margin-top: 0;
+    font-weight: 300;
+    line-height: 1.2;
+    color: $darkBlue;
 }
 
+h1{
+    font-size: 2.31rem;
+    margin-bottom: 1.5rem;
+    animation: slide-from-left 700ms ease-in-out forwards;
+
+@include breakpoint-up(large){
+        font-size: $font-xlg;
+    }
+}
+
+h2{
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+    @include breakpoint-up(large){
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+}
+p{
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
 a, a:visited,a:hover{
     text-decoration: none;
 }
@@ -37,12 +63,19 @@ a, a:visited,a:hover{
     margin: 0 auto;
 
     &-pa{
-        padding: 2.25rem 1.5rem;
+        padding: 4.375rem 1.5rem;
+        @include breakpoint-up(large){
+            padding: 6rem 1.5rem;
+        }
     }
 
     &-py{
-        padding-top: 2.25rem;
-        padding-bottom: 2.25rem;
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
     }
 
     &-px{
@@ -51,10 +84,16 @@ a, a:visited,a:hover{
     }
 
     &-pt{
-        padding-top: 2.25rem;
+        padding-top: 4.375rem;
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+        }
     }
     &-pb{
-        padding-bottom: 2.25rem;
+        padding-bottom: 4.375rem;
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+        }
     }
     &-pr{
         padding-right: 1.5rem;

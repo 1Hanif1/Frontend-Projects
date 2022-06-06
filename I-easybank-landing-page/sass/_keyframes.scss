@@ -56,14 +56,19 @@
 
 @keyframes from-top-right {
     from{
-        background-size: 74%;
-        background-position: center 100%;
-        left: 50%;
+        height: 100%;
     }
     to{
-        background-size: 94%;
-        background-position: center 150%;
-        left: 25%;
+        height: 127%;
+    }
+}
+
+@keyframes hero-bg {
+    from{
+        background-position: -50% 100%;
+    }
+    to{
+    background-position: 0% 74%;
     }
 }
 

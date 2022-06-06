@@ -44,9 +44,9 @@
             @include breakpoint-up(large){
                 background-image: url('../images/bg-intro-desktop.svg');
                 width: 150%;
-                background-position: 0% 83%;
+                background-position: 0% 74%;
                 background-size: 120%;
-                
+                animation: hero-bg 800ms ease-in-out;
             }
 
         }
@@ -67,7 +67,7 @@
 
             @include breakpoint-up(large){
                 width: 120%;
-                height: 122%;
+                height: 127%;
                 background-size: 94%;
                 background-repeat: no-repeat;
                 background-position: center 150%;
