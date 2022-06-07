@@ -127,6 +127,7 @@ a, a:visited,a:hover{
 
 // Buttons
 button, .button{
+    position: relative;
     display: inline-block;
     padding: 0.875rem 2.1785rem;
     background: linear-gradient(to right,$limeGreen,$brightCyan);
@@ -138,8 +139,22 @@ button, .button{
     font-size: $font-small;
     color: $white;
     transition: opacity 300ms ease-in-out;
-    &:hover{
-        opacity: 0.75;
+    overflow: hidden;
+
+    &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,0.25);
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+
+    }
+    &:hover::before{
+        opacity: 1;
     }
 }
 

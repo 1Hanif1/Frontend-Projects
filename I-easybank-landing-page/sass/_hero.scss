@@ -111,6 +111,9 @@
         a{
             margin-right: auto;
             animation: slide-from-left 300ms ease-in-out forwards;
+            &:hover{
+                opacity: 0.75;
+            }
         }
     }
 
