@@ -18,8 +18,10 @@
     &__item{
         text-align: center;
         padding: 0.9375rem;
+        transform: translateY(20%);
+        opacity: 0;
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
         @include breakpoint-up(medium){
-            
             flex: 1 0 50%;
         }
 
@@ -51,3 +53,4 @@
         line-height: 1.5;
     }
 }
+

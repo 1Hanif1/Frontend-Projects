@@ -54,7 +54,18 @@
     }
 }
 
-@keyframes from-top-right {
+@keyframes slide-from-bottom {
+    from{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes from-top-desktop {
     from{
         height: 100%;
     }
@@ -62,6 +73,16 @@
         height: 127%;
     }
 }
+
+@keyframes from-top-mobile {
+    from{
+        height: 70%;
+    }
+    to{
+        height: 100%;
+    }
+}
+
 
 @keyframes hero-bg {
     from{
@@ -71,6 +92,7 @@
     background-position: 0% 74%;
     }
 }
+
 
 .fade-down{
     animation: fade-down ease-in-out 300ms forwards;

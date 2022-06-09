@@ -21,6 +21,7 @@
         min-height: 17.5rem;
         position: relative;
         order: 2;
+        overflow: hidden;
 
         @include breakpoint-up(medium){
             min-height: 25rem;
@@ -30,7 +31,7 @@
             flex: 3;
             min-height: 41rem;
             background-image: none;
-
+            overflow: visible;
         }
 
         &::before{
@@ -60,7 +61,7 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
-
+            animation: from-top-mobile 800ms ease-in-out forwards;
             @include breakpoint-up(medium){
                 background-size: 52%;
             }
@@ -72,7 +73,7 @@
                 background-repeat: no-repeat;
                 background-position: center 150%;
                 left: 25%;
-                animation: from-top-right 800ms ease-in-out forwards;
+                animation: from-top-desktop 800ms ease-in-out forwards;
             }
 
 
@@ -95,9 +96,9 @@
             line-height: 1.2;
             color: $darkBlue;
             margin-bottom: 1.5rem;
-            animation: slide-from-left 700ms ease-in-out forwards;
-
-        @include breakpoint-up(large){
+            animation: slide-from-bottom 700ms ease-in-out forwards;
+            @include breakpoint-up(large){
+                animation: slide-from-left 700ms ease-in-out forwards;
                 font-size: $font-xlg;
             }
         }
@@ -105,12 +106,18 @@
         p{
             line-height: 1.5;
             margin-bottom: 2.25rem;
-            animation: slide-from-left 500ms ease-in-out forwards;
+            animation: slide-from-bottom 500ms ease-in-out forwards;
+            @include breakpoint-up(large){
+                animation: slide-from-left 500ms ease-in-out forwards;
+            }
         }
 
         a{
             margin-right: auto;
-            animation: slide-from-left 300ms ease-in-out forwards;
+            animation: slide-from-bottom 300ms ease-in-out forwards;
+            @include breakpoint-up(large){
+                animation: slide-from-left 300ms ease-in-out forwards;
+            }
             &:hover{
                 opacity: 0.75;
             }
