@@ -51,12 +51,30 @@
     opacity: 1;
   }
 }
-@keyframes from-top-right {
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes from-top-desktop {
   from {
     height: 100%;
   }
   to {
     height: 127%;
+  }
+}
+@keyframes from-top-mobile {
+  from {
+    height: 70%;
+  }
+  to {
+    height: 100%;
   }
 }
 @keyframes hero-bg {
@@ -364,6 +382,7 @@ button:hover::before, .button:hover::before {
   min-height: 17.5rem;
   position: relative;
   order: 2;
+  overflow: hidden;
 }
 @media (min-width: 40em) {
   .hero__image {
@@ -375,6 +394,7 @@ button:hover::before, .button:hover::before {
     flex: 3;
     min-height: 41rem;
     background-image: none;
+    overflow: visible;
   }
 }
 .hero__image::before {
@@ -406,6 +426,7 @@ button:hover::before, .button:hover::before {
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+  animation: from-top-mobile 800ms ease-in-out forwards;
 }
 @media (min-width: 40em) {
   .hero__image::after {
@@ -420,7 +441,7 @@ button:hover::before, .button:hover::before {
     background-repeat: no-repeat;
     background-position: center 150%;
     left: 25%;
-    animation: from-top-right 800ms ease-in-out forwards;
+    animation: from-top-desktop 800ms ease-in-out forwards;
   }
 }
 .hero__text {
@@ -439,21 +460,32 @@ button:hover::before, .button:hover::before {
   line-height: 1.2;
   color: hsl(233deg, 26%, 24%);
   margin-bottom: 1.5rem;
-  animation: slide-from-left 700ms ease-in-out forwards;
+  animation: slide-from-bottom 700ms ease-in-out forwards;
 }
 @media (min-width: 64em) {
   .hero__text h1 {
+    animation: slide-from-left 700ms ease-in-out forwards;
     font-size: 3.25rem;
   }
 }
 .hero__text p {
   line-height: 1.5;
   margin-bottom: 2.25rem;
-  animation: slide-from-left 500ms ease-in-out forwards;
+  animation: slide-from-bottom 500ms ease-in-out forwards;
+}
+@media (min-width: 64em) {
+  .hero__text p {
+    animation: slide-from-left 500ms ease-in-out forwards;
+  }
 }
 .hero__text a {
   margin-right: auto;
-  animation: slide-from-left 300ms ease-in-out forwards;
+  animation: slide-from-bottom 300ms ease-in-out forwards;
+}
+@media (min-width: 64em) {
+  .hero__text a {
+    animation: slide-from-left 300ms ease-in-out forwards;
+  }
 }
 .hero__text a:hover {
   opacity: 0.75;
@@ -481,6 +513,9 @@ button:hover::before, .button:hover::before {
 .feature__item {
   text-align: center;
   padding: 0.9375rem;
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 @media (min-width: 40em) {
   .feature__item {
@@ -544,7 +579,9 @@ button:hover::before, .button:hover::before {
   cursor: pointer;
   background-color: white;
   box-shadow: 0px 3px 12px -5px rgba(0, 0, 0, 0.15);
-  transition: transform 200ms ease-in-out;
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 .article__item:hover {
   transform: scale(1.05);
@@ -684,6 +721,11 @@ button:hover::before, .button:hover::before {
     text-align: right;
     align-self: end;
   }
+}
+
+.show-card {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
