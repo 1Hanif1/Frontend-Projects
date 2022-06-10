@@ -8,7 +8,6 @@ const featureContainer = document.querySelector('.feature');
 const articleContainer = document.querySelector('.articles');
 
 const observerOptions = { root: null, threshold: 0.4 }
-
 const features = document.querySelectorAll('.feature__item');
 const featureObserver = new IntersectionObserver(
     (e) => {
@@ -27,7 +26,7 @@ const featureObserver = new IntersectionObserver(
     },
     observerOptions
 );
-featureObserver.observe(featureContainer);
+
 
 const articles = document.querySelectorAll('.article__item');
 const articleObserver = new IntersectionObserver(
@@ -46,7 +45,7 @@ const articleObserver = new IntersectionObserver(
     },
     observerOptions
 )
-articleObserver.observe(articleContainer);
+
 
 function hamburgerToggleFunction() {
     header.classList.toggle('open')
@@ -63,3 +62,13 @@ function hamburgerToggleFunction() {
 
 hamburgerMenu.addEventListener('click', hamburgerToggleFunction)
 overlay.addEventListener('click', hamburgerToggleFunction)
+
+window.addEventListener('load', () => {
+    if (window.innerWidth < 1024) {
+        features.forEach(feature => feature.classList.add('show-card'));
+        articles.forEach(article => article.classList.add('show-card'));
+    } else {
+        featureObserver.observe(featureContainer);
+        articleObserver.observe(articleContainer);
+    }
+})
