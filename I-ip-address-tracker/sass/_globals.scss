@@ -11,7 +11,11 @@ body{
 }
 
 ::-webkit-scrollbar{
-    display: none;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(83, 83, 204);
 }
 
 .container{
