@@ -1,0 +1,41 @@
+.aboutus{
+    display: grid;
+    grid-template-columns: 2fr 2.33fr 2fr;
+    font-size: 1vw;
+    &__content{
+        padding: 4em 3em;
+
+        &--title{
+            font-size: 1.25em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        &--paragraph{
+            color: hsl(0, 0%, 63%);
+            margin-top: 1em;
+            line-height: 1.25;
+        }
+    }
+
+    &__figure{
+        &--one, &--two{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .aboutus{
+        display: block;
+        font-size: 4vw;
+        figure{
+            height: 15em;
+        }
+
+        &__content{
+            padding: 4em 2em;
+        }
+    }
+}

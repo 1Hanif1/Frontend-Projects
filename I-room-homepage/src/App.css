@@ -1,0 +1,8 @@
+.attribution { font-size: 1vw; text-align: center; padding: 1em 0em;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 800px) {
+    .attribution {
+        font-size: 3vw;
+    }
+}

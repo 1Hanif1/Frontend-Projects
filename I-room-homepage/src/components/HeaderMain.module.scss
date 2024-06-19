@@ -1,0 +1,118 @@
+.main{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    font-size: 1vw;
+
+    &__image{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        // padding: 2em;
+        position: relative;
+        &--title{
+            font-size: 3em;
+            line-height: 1;
+            font-weight: 700;
+        }
+        &--paragraph{
+            font-size: 1.25em;
+            margin-block: 1.5em;
+            line-height: 1.25;
+            color: hsl(0, 0%, 63%);
+            font-weight: 500;
+            min-height: 8em;
+        }
+        &--cta{
+            color: black;
+            font-size: 1.25em;
+            letter-spacing: .7em;
+            cursor: pointer;
+            &:hover{
+                color: hsl(0, 0%, 63%);
+            }
+            img{
+                margin-left: 2em;
+                width: 2em;
+            }
+        }
+        &--container {
+            padding: 5em 5em 7em 5em;
+        }
+    }
+
+    &__buttons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        button{
+            background-color: black;
+            border: none;
+            font-size: 1.5em;
+            padding: 1em 1.5em;
+            cursor: pointer;
+            &:hover{
+                background-color: hsl(0, 0%, 63%);
+            }
+            img{
+                width: .75em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main{
+        font-size: 4vw;
+        display: block;
+
+        &__image{
+            position: relative;
+        }
+
+       &__content{
+
+        &--title{
+            font-size: 2em;
+        }
+
+        &--paragraph{
+            font-size: 1em;
+            margin-block: 1.5em 3em;
+        }
+
+        &--cta{
+            color: black;
+            font-size: 1em;
+            letter-spacing: .7em;
+            cursor: pointer;
+            img {
+                margin-left: 2em;
+                width: 2em;
+            }
+        }
+
+        &--container {
+            padding: 3em 2em;
+        }
+       }
+        &__image{
+            display: flex;
+            align-items: end;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__buttons{
+            font-size: .7em;
+            bottom: 0;
+            right: 0;
+            left: unset;
+        }
+    }
+}
