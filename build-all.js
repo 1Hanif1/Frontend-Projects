@@ -9,15 +9,15 @@ const vanillaProjects = [
   'I-ip-address-tracker',
   'I-todo-app',
   'I-url-shortening-landing-page',
-  'J-coding-bootcamp-testimonials-slider',
+  'J-Coding-bootcamp-testimonials-slider',
   'J-dashboard-with-theme-switcher',
   'J-fylo-landing-page',
-  'J-sunny-side-landing-page',
+  'J-Sunny-Side-Landing-Page',
   'J-time-tracking-dashboard',
-  'N-coming-soon-landing-page',
+  'N-Coming-Soon-Landing-Page',
   'N-faq-accordion',
-  'N-landing-page-single-section',
-  'N-order-summary-component',
+  'N-Landing-Page-Single-Section',
+  'N-Order-Summary-Component',
   'N-stats-card-component'
 ];
 
