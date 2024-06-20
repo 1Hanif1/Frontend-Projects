@@ -3,81 +3,81 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/i-calculator-app/*"
-  to = "/i-calculator-app/:splat"
+  from = "/I-calculator-app/*"
+  to = "/I-calculator-app/:splat"
   status = 200
 
 [[redirects]]
-  from = "/i-easybank-landing-page/*"
-  to = "/i-easybank-landing-page/:splat"
+  from = "/I-easybank-landing-page/*"
+  to = "/I-easybank-landing-page/:splat"
   status = 200
 
 [[redirects]]
-  from = "/i-ip-address-tracker/*"
-  to = "/i-ip-address-tracker/:splat"
+  from = "/I-ip-address-tracker/*"
+  to = "/I-ip-address-tracker/:splat"
   status = 200
 
 [[redirects]]
-  from = "/i-room-homepage/*"
-  to = "/i-room-homepage/:splat"
+  from = "/I-room-homepage/*"
+  to = "/I-room-homepage/:splat"
   status = 200
 
 [[redirects]]
-  from = "/i-todo-app/*"
-  to = "/i-todo-app/:splat"
+  from = "/I-todo-app/*"
+  to = "/I-todo-app/:splat"
   status = 200
 
 [[redirects]]
-  from = "/i-url-shortening-landing-page/*"
-  to = "/i-url-shortening-landing-page/:splat"
+  from = "/I-url-shortening-landing-page/*"
+  to = "/I-url-shortening-landing-page/:splat"
   status = 200
 
 [[redirects]]
-  from = "/j-coding-bootcamp-testimonials-slider/*"
-  to = "/j-coding-bootcamp-testimonials-slider/:splat"
+  from = "/J-coding-bootcamp-testimonials-slider/*"
+  to = "/J-coding-bootcamp-testimonials-slider/:splat"
   status = 200
 
 [[redirects]]
-  from = "/j-dashboard-with-theme-switcher/*"
-  to = "/j-dashboard-with-theme-switcher/:splat"
+  from = "/J-dashboard-with-theme-switcher/*"
+  to = "/J-dashboard-with-theme-switcher/:splat"
   status = 200
 
 [[redirects]]
-  from = "/j-fylo-landing-page/*"
-  to = "/j-fylo-landing-page/:splat"
+  from = "/J-fylo-landing-page/*"
+  to = "/J-fylo-landing-page/:splat"
   status = 200
 
 [[redirects]]
-  from = "/j-sunny-side-landing-page/*"
-  to = "/j-sunny-side-landing-page/:splat"
+  from = "/J-sunny-side-landing-page/*"
+  to = "/J-sunny-side-landing-page/:splat"
   status = 200
 
 [[redirects]]
-  from = "/j-time-tracking-dashboard/*"
-  to = "/j-time-tracking-dashboard/:splat"
+  from = "/J-time-tracking-dashboard/*"
+  to = "/J-time-tracking-dashboard/:splat"
   status = 200
 
 [[redirects]]
-  from = "/n-coming-soon-landing-page/*"
-  to = "/n-coming-soon-landing-page/:splat"
+  from = "/N-coming-soon-landing-page/*"
+  to = "/N-coming-soon-landing-page/:splat"
   status = 200
 
 [[redirects]]
-  from = "/n-faq-accordion/*"
-  to = "/n-faq-accordion/:splat"
+  from = "/N-faq-accordion/*"
+  to = "/N-faq-accordion/:splat"
   status = 200
 
 [[redirects]]
-  from = "/n-landing-page-single-section/*"
-  to = "/n-landing-page-single-section/:splat"
+  from = "/N-landing-page-single-section/*"
+  to = "/N-landing-page-single-section/:splat"
   status = 200
 
 [[redirects]]
-  from = "/n-order-summary-component/*"
-  to = "/n-order-summary-component/:splat"
+  from = "/N-order-summary-component/*"
+  to = "/N-order-summary-component/:splat"
   status = 200
 
 [[redirects]]
-  from = "/n-stats-card-component/*"
-  to = "/n-stats-card-component/:splat"
+  from = "/N-stats-card-component/*"
+  to = "/N-stats-card-component/:splat"
   status = 200
