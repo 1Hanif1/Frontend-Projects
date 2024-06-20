@@ -22,7 +22,7 @@ const vanillaProjects = [
 ];
 
 // List of React projects
-const reactProjects = ['i-room-homepage'];
+const reactProjects = ['I-room-homepage'];
 
 // Create a dist directory if it doesn't exist
 if (!fs.existsSync('dist')) {
