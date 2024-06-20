@@ -1,0 +1,83 @@
+[build]
+  command = "npm run build-all"
+  publish = "dist"
+
+[[redirects]]
+  from = "/i-calculator-app/*"
+  to = "/i-calculator-app/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/i-easybank-landing-page/*"
+  to = "/i-easybank-landing-page/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/i-ip-address-tracker/*"
+  to = "/i-ip-address-tracker/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/i-room-homepage/*"
+  to = "/i-room-homepage/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/i-todo-app/*"
+  to = "/i-todo-app/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/i-url-shortening-landing-page/*"
+  to = "/i-url-shortening-landing-page/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/j-coding-bootcamp-testimonials-slider/*"
+  to = "/j-coding-bootcamp-testimonials-slider/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/j-dashboard-with-theme-switcher/*"
+  to = "/j-dashboard-with-theme-switcher/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/j-fylo-landing-page/*"
+  to = "/j-fylo-landing-page/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/j-sunny-side-landing-page/*"
+  to = "/j-sunny-side-landing-page/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/j-time-tracking-dashboard/*"
+  to = "/j-time-tracking-dashboard/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/n-coming-soon-landing-page/*"
+  to = "/n-coming-soon-landing-page/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/n-faq-accordion/*"
+  to = "/n-faq-accordion/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/n-landing-page-single-section/*"
+  to = "/n-landing-page-single-section/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/n-order-summary-component/*"
+  to = "/n-order-summary-component/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/n-stats-card-component/*"
+  to = "/n-stats-card-component/:splat"
+  status = 200

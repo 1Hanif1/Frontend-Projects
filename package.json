@@ -1,0 +1,12 @@
+{
+  "name": "frontend-projects",
+  "version": "1.0.0",
+  "description": "Frontend Projects made my Hanif Barbhuiya",
+  "main": "build-all.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-all": "node build-all.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
