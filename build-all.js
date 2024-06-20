@@ -4,21 +4,21 @@ const path = require('path');
 
 // List of vanilla JS projects
 const vanillaProjects = [
-  'i-calculator-app',
-  'i-easybank-landing-page',
-  'i-ip-address-tracker',
-  'i-todo-app',
-  'i-url-shortening-landing-page',
-  'j-coding-bootcamp-testimonials-slider',
-  'j-dashboard-with-theme-switcher',
-  'j-fylo-landing-page',
-  'j-sunny-side-landing-page',
-  'j-time-tracking-dashboard',
-  'n-coming-soon-landing-page',
-  'n-faq-accordion',
-  'n-landing-page-single-section',
-  'n-order-summary-component',
-  'n-stats-card-component'
+  'I-calculator-app',
+  'I-easybank-landing-page',
+  'I-ip-address-tracker',
+  'I-todo-app',
+  'I-url-shortening-landing-page',
+  'J-coding-bootcamp-testimonials-slider',
+  'J-dashboard-with-theme-switcher',
+  'J-fylo-landing-page',
+  'J-sunny-side-landing-page',
+  'J-time-tracking-dashboard',
+  'N-coming-soon-landing-page',
+  'N-faq-accordion',
+  'N-landing-page-single-section',
+  'N-order-summary-component',
+  'N-stats-card-component'
 ];
 
 // List of React projects
