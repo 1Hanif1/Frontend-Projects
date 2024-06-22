@@ -3,6 +3,11 @@
   publish = "dist"
 
 [[redirects]]
+  from = "/A-multi-step-form/*"
+  to = "/A-multi-step-form/:splat"
+  status = 200
+
+[[redirects]]
   from = "/I-calculator-app/*"
   to = "/I-calculator-app/:splat"
   status = 200
